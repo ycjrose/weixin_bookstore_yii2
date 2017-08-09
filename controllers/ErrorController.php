@@ -29,8 +29,9 @@ class ErrorController extends Controller{
 			//错误信息写入数据库
 			//todo
 		}
-		
-		return '错误</br>错误信息：' . $error_msg ;
+		$this->layout = false;
+		return $this->render('error',['error_msg' => $error_msg]);
+		//return '错误</br>错误信息：' . $error_msg ;
 	}
 
 	

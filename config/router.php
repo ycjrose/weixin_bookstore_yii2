@@ -3,6 +3,6 @@
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            	'/' => '/index/index',
+            	'/' => '/default/index',
             ],
 		];
