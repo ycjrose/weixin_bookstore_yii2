@@ -1,11 +1,11 @@
 <?php
 namespace app\controllers;
-use yii\web\Controller;
+use app\common\components\BaseWebController;
 use yii\log\FileTarget;
 /**
 * 错误页面控制类
 */
-class ErrorController extends Controller{
+class ErrorController extends BaseWebController{
 	public function actionError() {
 		//记录错误信息写入文件和数据库
 		$error = \Yii::$app->errorHandler->exception;
@@ -29,7 +29,7 @@ class ErrorController extends Controller{
 			//错误信息写入数据库
 			//todo
 		}
-		$this->layout = false;
+		
 		return $this->render('error',['error_msg' => $error_msg]);
 		//return '错误</br>错误信息：' . $error_msg ;
 	}
