@@ -2,9 +2,9 @@
 
 namespace app\modules\web\controllers;
 
-use yii\web\Controller;
+use app\modules\web\common\BaseController;
 
-class BookController extends Controller{
+class BookController extends BaseController{
      public function __construct($id, $module, $config = []){
         parent::__construct($id, $module, $config = []);
         $this->layout = 'main';

@@ -2,9 +2,9 @@
 
 namespace app\modules\web\controllers;
 
-use yii\web\Controller;
+use app\modules\web\common\BaseController;
 
-class MemberController extends Controller{
+class MemberController extends BaseController{
      public function __construct($id, $module, $config = []){
         parent::__construct($id, $module, $config = []);
         $this->layout = 'main';

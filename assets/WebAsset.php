@@ -18,6 +18,8 @@ class WebAsset extends AssetBundle
     	$this->js = [
 	    	'plugins/jquery-2.1.1.js',
 	    	'js/web/bootstrap.min.js',
+            'plugins/layer/layer.js',
+            'plugins/dialog.js',
 	    	'js/web/common.js?ver='.RELEASE_VERSION,
     	];
     	parent::registerAssetFiles($view);

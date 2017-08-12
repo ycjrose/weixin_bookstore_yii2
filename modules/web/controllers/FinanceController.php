@@ -2,9 +2,9 @@
 
 namespace app\modules\web\controllers;
 
-use yii\web\Controller;
+use app\modules\web\common\BaseController;
 
-class FinanceController extends Controller{
+class FinanceController extends BaseController{
      public function __construct($id, $module, $config = []){
         parent::__construct($id, $module, $config = []);
         $this->layout = 'main';

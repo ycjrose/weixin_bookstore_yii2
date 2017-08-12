@@ -3,11 +3,11 @@ namespace app\common\components;
 use yii\web\Controller;
 /**
 * 集成常用的公共方法类，所有Controller都可以使用 
-* get,post,setCookie,removeCookie,renderJson
+* get,post,setCookie,removeCookie,renderJson 
 */
 class BaseWebController extends Controller{
 	
-	public $enableCsrfValidation = false;//关闭csrf
+    public $enableCsrfValidation = false;//关闭csrf
 
 	//获取get参数
 	public function get($key,$default_val = ''){
@@ -45,5 +45,7 @@ class BaseWebController extends Controller{
           'data' => $data,
           'req_id' => uniqid(),
 		]);
+		
 	}
+
 }

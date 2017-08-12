@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers;
 use app\common\components\BaseWebController;
+use app\common\services\applog\AppLogService;
 use yii\log\FileTarget;
 /**
 * 错误页面控制类
@@ -27,7 +28,7 @@ class ErrorController extends BaseWebController{
 			];
 			$log->export();
 			//错误信息写入数据库
-			//todo
+			AppLogService::addErrorLog(\Yii::$app->id,$error,$error_msg);
 		}
 		
 		return $this->render('error',['error_msg' => $error_msg]);

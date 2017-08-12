@@ -79,7 +79,7 @@ $this->beginPage();
 
 
 						<li class="dropdown user_info">
-							<a  class="dropdown-toggle" data-toggle="dropdown" href="/web/user/edit">
+							<a  class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
 	                            <img alt="image" class="img-circle" src="/images/web/avatar.png" />
 							</a>
 	                        <ul class="dropdown-menu dropdown-messages">
