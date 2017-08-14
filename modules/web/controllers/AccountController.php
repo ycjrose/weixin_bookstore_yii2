@@ -6,6 +6,8 @@ use app\modules\web\common\BaseController;
 
 use app\models\User;
 
+use app\models\log\AppAccessLog;
+
 use app\common\services\UrlService; 
 
 use app\common\services\ContactService;
@@ -136,7 +138,14 @@ class AccountController extends BaseController{
         if(!$user_info){
             return $this->redirect($reback_url);
         }
-        return $this->render('info',['user_info' => $user_info]);
+
+        //账号的浏览日志
+        $access_list = AppAccessLog::find()->where(['uid' => $user_info['uid']])
+                        ->orderBy(['id' => SORT_DESC])->limit(10)->asArray()->all();
+        return $this->render('info',[
+            'user_info' => $user_info,
+            'access_list' => $access_list,
+        ]);
     }
     public function actionOps(){
         //删除或恢复操作

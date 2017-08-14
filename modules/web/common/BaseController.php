@@ -3,6 +3,7 @@ namespace app\modules\web\common;
 use app\common\components\BaseWebController; 
 use app\models\User;
 use app\common\services\UrlService;
+use app\common\services\applog\AppLogService;
 /**
 * web模块下统一控制器中独有的验证
 * 1：指定特定的布局文件 
@@ -34,8 +35,11 @@ class BaseController extends BaseWebController {
 				$this->renderJson(-302,'未登录，请先登录');
 			}
 			$this->redirect(UrlService::buildWebUrl('/user/login'));
+			return false;
 		}
 		$view = \Yii::$app->view->params['user_info'] = $this->current_user;
+		//记录当前登录人的浏览记录
+		AppLogService::addAppAccessLog($this->current_user['uid']);
 		return true;
 	}
 	/**
