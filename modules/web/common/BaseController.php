@@ -1,6 +1,6 @@
 <?php
 namespace app\modules\web\common;
-use app\common\components\BaseWebController;
+use app\common\components\BaseWebController; 
 use app\models\User;
 use app\common\services\UrlService;
 /**
@@ -12,6 +12,7 @@ class BaseController extends BaseWebController {
 
 	protected $auth_cookie_name = 'ycj_book';
 
+	public $current_user = null ;//当前登录人信息
 	public $allowAllAction = [
 		'web/user/login'
 	];
@@ -19,6 +20,7 @@ class BaseController extends BaseWebController {
 	public function __construct($id, $module, $config = []){
 	    parent::__construct($id, $module, $config = []);
 	    $this->layout = 'main';
+
 	}
 	//登录统一验证
 	public function beforeAction($action){
@@ -33,6 +35,7 @@ class BaseController extends BaseWebController {
 			}
 			$this->redirect(UrlService::buildWebUrl('/user/login'));
 		}
+		$view = \Yii::$app->view->params['user_info'] = $this->current_user;
 		return true;
 	}
 	/**
@@ -50,6 +53,7 @@ class BaseController extends BaseWebController {
 		if(!preg_match('/^\d+$/', $uid)){ 
 			return false;
 		}
+		//取出登录者信息
 		$user_info = User::find()->where(['uid' => $uid])->one();
 		if(!$user_info){
 			return false;
@@ -59,6 +63,7 @@ class BaseController extends BaseWebController {
 			return false;
 		}
 		//通过所有验证
+		$this->current_user = $user_info;
 		return true;
 	}
 

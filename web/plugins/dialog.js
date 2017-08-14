@@ -39,5 +39,11 @@ var dialog = {
             btn : ['确定'],
         });
     },
+    //小提示不跳转弹出层
+    tips : function(message,element){
+        layer.tips(message,element,{
+            tips: [3,'#a20715']
+        });
+    }
 }
 

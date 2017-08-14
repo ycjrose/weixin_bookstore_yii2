@@ -1,26 +1,19 @@
+<?php
+use app\common\services\UrlService;
+use app\common\services\StaticService;
+StaticService::includeAppJs('/js/web/user/edit.js',app\assets\WebAsset::className());
+?>
 
-<div class="row  border-bottom">
-	<div class="col-lg-12">
-		<div class="tab_title">
-			<ul class="nav nav-pills">
-								<li  class="current"  >
-					<a href="/web/user/edit">信息编辑</a>
-				</li>
-								<li  >
-					<a href="/web/user/reset-pwd">修改密码</a>
-				</li>
-							</ul>
-		</div>
-	</div>
-</div>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/user/tab_common_user.php',['current' => 'edit']);?>
+
 <div class="row m-t  user_edit_wrap">
     <div class="col-lg-12">
         <h2 class="text-center">账号信息编辑</h2>
-        <div class="form-horizontal m-t m-b">
+        <div class="form-horizontal m-t m-b" id="weixin-form">
             <div class="form-group">
                 <label class="col-lg-2 control-label">手机:</label>
                 <div class="col-lg-10">
-                    <input type="text" name="mobile" class="form-control" placeholder="请输入手机~~"  readonly value="11012345679">
+                    <input type="text" name="mobile" class="form-control" placeholder="请输入手机~~"  readonly value="<?=$user_info['mobile'];?>">
                 </div>
             </div>
             <div class="hr-line-dashed"></div>
@@ -28,7 +21,7 @@
             <div class="form-group">
                 <label class="col-lg-2 control-label">姓名:</label>
                 <div class="col-lg-10">
-                    <input type="text" name="nickname" class="form-control" placeholder="请输入姓名~~" value="编程浪子郭大爷">
+                    <input type="text" name="nickname" class="form-control" placeholder="请输入姓名~~" value="<?=$user_info['nickname'];?>">
                 </div>
             </div>
             <div class="hr-line-dashed"></div>
@@ -36,17 +29,21 @@
             <div class="form-group">
                 <label class="col-lg-2 control-label">邮箱:</label>
                 <div class="col-lg-10">
-                    <input type="text" name="email" class="form-control" placeholder="请输入邮箱~~" value="apanly@126.com">
+                    <input type="text" name="email" class="form-control" placeholder="请输入邮箱~~" value="<?=$user_info['email'];?>">
                 </div>
             </div>
             <div class="hr-line-dashed"></div>
             <div class="form-group">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <button class="btn btn-w-m btn-outline btn-primary save">保存</button>
+                    <button class="btn btn-w-m btn-outline btn-primary " id="button-submit">保存</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
+<script type="text/javascript">
+    var SCOPE = {
+        'save_url':'<?=UrlService::buildWebUrl('/user/edit');?>',
+        'jump_url':'<?=UrlService::buildWebUrl('/user/edit');?>',
+    }
+</script>

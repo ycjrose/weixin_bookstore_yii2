@@ -25,6 +25,30 @@ class User extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    //更新密码操作
+    public function setPwd($pwd){
+        $this->login_pwd = $this->getSaltPwd($pwd);
+        $this->updated_time = date('Y:m:d H:i:s');
+        $this->update(0);
+    }
+    //生成随机秘钥
+    public function setSalt($length = 16){
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$^&*%';
+        $salt = '';
+        for ($i=0; $i < $length; $i++) { 
+            $salt .= $chars[mt_rand(0,strlen($chars)-1)]; 
+        }
+        $this->login_salt = $salt;
+    }
+    //生成加密密码
+    public function getSaltPwd($pwd){
+        return md5($pwd . md5($this->login_salt));
+    }
+    //校验密码是否一致
+    public function verifyPwd($pwd){
+        return $this->getSaltPwd($pwd) == $this->login_pwd;
+    }
+
     public static function tableName()
     {
         return 'user';

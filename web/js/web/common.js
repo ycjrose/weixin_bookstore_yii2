@@ -222,3 +222,39 @@ $('#button-submit').click(function(){
         
     },'JSON');
 });
+
+/**
+*删除或恢复操作
+*/
+$('.button-ops').click(function(){
+    var action = $(this).attr('attr-action');
+    var uid = $(this).attr('data');
+    var message = $(this).attr('attr-message');
+    var url = SCOPE.ops_url;
+    var postData = {'action':action,'uid':uid};
+    layer.open({
+            content : message,
+            icon:3,
+            btn : ['是','否'],
+            yes : function(){
+                //异步传输
+                todelete(url,postData);
+            },
+    });
+});
+/**
+*异步传输函数
+*/
+function todelete(url,data){
+    $.post(url,data,function(result){
+        if(result.code === -1){
+            //失败
+            dialog.error(result.msg);
+        }
+        if(result.code === 200){
+            //成功
+            dialog.success(result.msg,'');
+        }
+        
+    },'JSON');
+}
