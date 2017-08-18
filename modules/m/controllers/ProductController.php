@@ -2,14 +2,11 @@
 
 namespace app\modules\m\controllers;
 
-use yii\web\Controller;
+use app\modules\m\common\BaseController;
 
 
-class ProductController extends Controller{
-    public function __construct($id, $module, $config = []){
-        parent::__construct($id, $module, $config = []);
-        $this->layout = 'main';
-    }
+class ProductController extends BaseController{
+
     public function actionIndex()
     {
     	//商品列表页w

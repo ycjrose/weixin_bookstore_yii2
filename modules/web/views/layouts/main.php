@@ -2,6 +2,7 @@
 use app\assets\WebAsset;
 use app\common\services\UrlService;
 WebAsset::register($this);
+$upload_config = \Yii::$app->params['upload'];
 $this->beginPage(); 
 ?>
 <!DOCTYPE html>
@@ -22,11 +23,11 @@ $this->beginPage();
 			<ul class="nav metismenu" id="side-menu">
 				<li class="nav-header">
 					<div class="profile-element text-center">
-                        <img alt="image" class="img-circle" src="<?=UrlService::buildWwwUrl('/images/web/logo.png');?>" />
+                        <img alt="image" class="img-circle" width="50" src="<?php echo UrlService::buildPicUrl('avatar',$this->params['user_info']['avatar']);?>" />
                         <p class="text-muted"><?php echo $this->params['user_info']['nickname'];?></p>
 					</div>
 					<div class="logo-element">
-                        <img alt="image" class="img-circle" src="<?=UrlService::buildWwwUrl('/images/web/logo.png');?>" />
+                        <img alt="image" class="img-circle" width="50" src="<?php echo UrlService::buildPicUrl('avatar',$this->params['user_info']['avatar']);?>" />
 					</div>
 				</li>
 				<li class="dashboard">
@@ -81,14 +82,14 @@ $this->beginPage();
 
 						<li class="dropdown user_info">
 							<a  class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
-	                            <img alt="image" class="img-circle" src="/images/web/avatar.png" />
+	                            <img alt="image" class="img-circle" src="<?php echo UrlService::buildPicUrl('avatar',$this->params['user_info']['avatar']);?>" />
 							</a>
 	                        <ul class="dropdown-menu dropdown-messages">
 	                            <li>
 	                                <div class="dropdown-messages-box">
 	                                   姓名：<?php echo $this->params['user_info']['nickname'];?>                                  <a href="/web/user/edit" class="pull-right">编辑</a>
 	                                </div>
-	                            </li>
+	                            </li> 
 	                            <li class="divider"></li>
 	                            <li>
 	                                <div class="dropdown-messages-box">
@@ -117,6 +118,10 @@ $this->beginPage();
 			<?=$content;?>
 			<!--不同内容end-->
 		</div>
+</div>
+
+<div class="hidden_layout_wrap hide">
+	<input type="hidden" name="upload_config" value='<?=json_encode($upload_config);?>' > 
 </div>
 <?php $this->endBody();?>
 </body>

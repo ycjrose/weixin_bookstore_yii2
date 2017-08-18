@@ -1,33 +1,28 @@
-<div class="row  border-bottom">
-	<div class="col-lg-12">
-		<div class="tab_title">
-			<ul class="nav nav-pills">
-								<li  class="current"  >
-					<a href="/web/member/index">会员列表</a>
-				</li>
-								<li  >
-					<a href="/web/member/comment">会员评论</a>
-				</li>
-							</ul>
-		</div>
-	</div>
-</div>
+<?php
+use app\common\services\UrlService;
+use app\common\services\UtilService; 
+use app\common\services\ContactService;
+?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/member/tab_common_member.php',['current' => 'index']);?>
+
 <div class="row">
     <div class="col-lg-12">
-        <form class="form-inline wrap_search">
+        <form class="form-inline wrap_search" action="<?=UrlService::buildWebUrl('/member');?>" method="get">
             <div class="row  m-t p-w-m">
                 <div class="form-group">
                     <select name="status" class="form-control inline">
-                        <option value="-1">请选择状态</option>
-						                            <option value="1"  >正常</option>
-						                            <option value="0"  >已删除</option>
-						                    </select>
+                        <option value="<?=ContactService::$status_default;?>">请选择状态</option>
+                        <?php foreach($status as $key => $value):?>
+                        <option value="<?=$key;?>" <?php if($key == $search_conditions['status']):?>selected<?php endif;?> ><?=$value;?></option>
+                        <?php endforeach;?>
+					</select>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" name="mix_kw" placeholder="请输入关键字" class="form-control" value="">
+                        <input type="text" name="mix_kw" placeholder="请输入姓名或手机号" class="form-control" value="<?=$search_conditions['mix_kw'];?>">
+                        <input type="hidden" name="p" value="1">
                         <span class="input-group-btn">
-                            <button type="button" class="btn  btn-primary search">
+                            <button type="submit" class="btn  btn-primary search">
                                 <i class="fa fa-search"></i>搜索
                             </button>
                         </span>
@@ -56,34 +51,47 @@
             </tr>
             </thead>
             <tbody>
-							                    <tr>
-                        <td><img alt="image" class="img-circle" src="/uploads/avatar/20170313/159419a875565b1afddd541fa34c9e65.jpg" style="width: 40px;height: 40px;"></td>
-                        <td>郭威</td>
-                        <td>12312312312</td>
-                        <td>未填写</td>
-                        <td>正常</td>
+                <?php foreach($members as $_item):?>
+					<tr>
+                        <td><img alt="image" class="img-circle" src="" style="width: 40px;height: 40px;"></td>
+                        <td><?=UtilService::encode($_item['nickname']);?></td>
+                        <td><?=UtilService::encode($_item['mobile']);?></td>
+                        <td><?=ContactService::$sex[$_item['sex']];?></td>
+                        <td><?=ContactService::$status[$_item['status']];?></td>
                         <td>
-                            <a  href="/web/member/info?id=1">
+                            <?php if($_item['status']):?>
+                            <a  href="<?=UrlService::buildWebUrl('/member/info',['id' => $_item['id'] ]);?>">
                                 <i class="fa fa-eye fa-lg"></i>
                             </a>
-							                                <a class="m-l" href="/web/member/set?id=1">
-                                    <i class="fa fa-edit fa-lg"></i>
-                                </a>
-
-                                <a class="m-l remove" href="javascript:void(0);" data="1">
+							<a class="m-l" href="<?=UrlService::buildWebUrl('/member/set',['id' => $_item['id'] ]);?>">
+                                <i class="fa fa-edit fa-lg"></i>
+                            </a>
+                            <a class="m-l button-ops" attr-action="remove" attr-message="是否删除？" href="<?=UrlService::buildNullUrl();?>" data="<?=$_item['id'];?>">
                                     <i class="fa fa-trash fa-lg"></i>
-                                </a>
-							                        </td>
+                             </a>
+                            <?php else:?>
+                                <a class="m-l button-ops" attr-action="recover" attr-message="是否恢复？" href="<?=UrlService::buildNullUrl();?>" data="<?=$_item['id'];?>">
+                                        <i class="fa fa-rotate-left fa-lg"></i>
+                                 </a>
+                            <?php endif;?>
+						</td>
                     </tr>
-							            </tbody>
+                <?php endforeach;?>
+			</tbody>
         </table>
 		<div class="row">
-	<div class="col-lg-12">
-		<span class="pagination_count" style="line-height: 40px;">共1条记录 | 每页50条</span>
-		<ul class="pagination pagination-lg pull-right" style="margin: 0 0 ;">
-										                    <li class="active"><a href="javascript:void(0);">1</a></li>
-                            					</ul>
-	</div>
+
+        <!--分页文件统一封装在其他模板文件中-->
+	<?=\Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+        'pages' => $pages,
+        'search_conditions' => $search_conditions,
+        'url' => '/member',
+    ]);?>
 </div>
     </div>
 </div>
+<script type="text/javascript">
+    var SCOPE = {
+        'ops_url':'<?=UrlService::buildWebUrl('/member/ops');?>'
+    }
+</script>

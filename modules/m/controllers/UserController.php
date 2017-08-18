@@ -2,17 +2,20 @@
 
 namespace app\modules\m\controllers;
 
-use yii\web\Controller;
+use app\modules\m\common\BaseController;
 
+class UserController extends BaseController{
 
-class UserController extends Controller{
-    public function __construct($id, $module, $config = []){
-        parent::__construct($id, $module, $config = []);
-        $this->layout = 'main';
+    public function actionIndex(){
+        //用户个人主页面
+        return $this->render('index');
     }
     public function actionBind()
     {
     	//用户登录绑定页面
+        if(\Yii::$app->request->isPost){
+
+        }
         return $this->render('bind');
     }
     public function actionCart(){
@@ -22,10 +25,6 @@ class UserController extends Controller{
     public function actionOrder(){
     	//我的订单页面
     	return $this->render('order');
-    }
-    public function actionIndex(){
-    	//用户个人主页面
-    	return $this->render('index');
     }
     public function actionAddress(){
     	//我的收货地址

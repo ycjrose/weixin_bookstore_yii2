@@ -1,7 +1,7 @@
 <?php
 
 namespace app\assets;
-
+ 
 use yii\web\AssetBundle;
 
 class MAsset extends AssetBundle
@@ -18,6 +18,8 @@ class MAsset extends AssetBundle
     	$this->js = [
 	    	'plugins/jquery-2.1.1.js',
 	    	'js/m/TouchSlide.1.1.js',
+            'plugins/layer/layer.js',
+            'plugins/dialog.js',
 	    	'js/m/common.js?ver='.RELEASE_VERSION,
     	];
     	parent::registerAssetFiles($view);

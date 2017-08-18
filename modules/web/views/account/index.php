@@ -1,8 +1,8 @@
 <?php
-use app\common\services\UrlService;
+use app\common\services\UrlService; 
 use app\common\services\ContactService;
 ?>
-<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_account_common.php',['current' => 'index']);?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_common_account.php',['current' => 'index']);?>
 <div class="row">
 	<div class="col-lg-12">
 		<form class="form-inline wrap_search" action="<?=UrlService::buildWebUrl('/account');?>" method="get">
@@ -79,23 +79,12 @@ use app\common\services\ContactService;
             </tbody>
         </table>
 		<div class="row">
-	<div class="col-lg-12">
-		<span class="pagination_count" style="line-height: 40px;">共<?=$pages['page_count'];?>条记录 | 每页<?=$pages['page_size'];?>条</span>
-		<ul class="pagination pagination-lg pull-right" style="margin: 0 0 ;">
-            <?php for($i=1;$i <= $pages['page_total'];$i++):?>
-                <?php if($i == $pages['p']):?>
-                    <li class="active"><a href="<?=UrlService::buildNullUrl();?>"><?=$i;?></a></li>
-                <?php else:?>
-                    <li><a href="<?=UrlService::buildWebUrl('/account',[
-                        'p' => $i,
-                        'status' => $search_conditions['status'],
-                        'mix_kw' => $search_conditions['mix_kw'],
-                    ]);?>"><?=$i;?></a></li>
-                <?php endif;?>
-			 
-            <?php endfor;?>
-        </ul>
-	</div>
+	        <!--分页文件统一封装在其他模板文件中-->
+        <?=\Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+            'pages' => $pages,
+            'search_conditions' => $search_conditions,
+            'url' => '/account',
+        ]);?>
 </div>	</div>
 </div>
 <script type="text/javascript">

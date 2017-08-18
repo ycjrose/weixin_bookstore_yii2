@@ -124,10 +124,13 @@ var common_ops = {
         return url + _paramUrl
 
     },
+    /**
+    * 获取图片路径函数
+    */
+
     buildPicUrl:function( bucket,img_key ){
-        var upload_config = eval( '(' + $(".hidden_layout_warp input[name=upload_config]").val() +')' );
-        var domain = "http://" + window.location.hostname;
-        return domain + upload_config[ bucket ] + "/" + img_key;
+        var upload_config = eval( '(' + $(".hidden_layout_wrap input[name=upload_config]").val() +')' );
+        return upload_config[ bucket ] + "/" + img_key;
     },
     alert:function( msg ,cb ){
         layer.alert( msg,{
@@ -206,6 +209,7 @@ $('#button-submit').click(function(){
     $('#weixin-form :input').each(function(){
        postData[$(this).attr('name')] = $(this).val();
     });
+
     //将获得的post传到服务器
     //console.log(postData);
     var url = SCOPE.save_url;
@@ -258,3 +262,4 @@ function todelete(url,data){
         
     },'JSON');
 }
+

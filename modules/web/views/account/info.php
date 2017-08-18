@@ -1,8 +1,8 @@
 <?php
 use app\common\services\UrlService; 
-use app\common\services\ContactService;
+
 ?>
-<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_account_common.php',['current' => '']);?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_common_account.php',['current' => '']);?>
 
 <div class="row m-t">
 	<div class="col-lg-12">
@@ -18,7 +18,7 @@ use app\common\services\ContactService;
         </div>
         <div class="row">
             <div class="col-lg-2 text-center">
-                <img class="img-circle circle-border" src="<?=UrlService::buildWwwUrl('/images/common/qrcode.jpg');?>" width="100px" height="100px"/>
+                <img class="img-circle circle-border" alt="iamge" src="<?=UrlService::buildPicUrl('avatar',$user_info['avatar']);?>" width="100px" height="100px"/>
             </div>
             <div class="col-lg-10">
                 <p class="m-t">姓名：<?=$user_info['nickname'];?></p>

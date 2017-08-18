@@ -7,8 +7,14 @@ use yii\web\Controller;
 */
 class BaseWebController extends Controller{
 	
+
     public $enableCsrfValidation = false;//关闭csrf
 
+    public function __construct($id, $module, $config = []){
+        parent::__construct($id, $module, $config = []);
+       	date_default_timezone_set("PRC");
+
+    }
 	//获取get参数
 	public function get($key,$default_val = ''){
 		return \Yii::$app->request->get($key,$default_val);

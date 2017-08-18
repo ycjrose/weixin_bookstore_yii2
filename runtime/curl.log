@@ -1,0 +1,145 @@
+2017-08-17 17:22:04 [ time:0.15151405334473 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx86d90c3249a688b5&secret=133c5892a481c4b0afa79088ac2e6623 
+method: get 
+data: [] 
+result: {"access_token":"aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ","expires_in":7200} 
+errorno: 0 error:  
+2017-08-17 17:24:18 [ time:0.1332049369812 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [CLqTNa0853vr20]"} 
+errorno: 0 error:  
+2017-08-17 17:24:22 [ time:0.11146807670593 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [Xcrija0856vr23]"} 
+errorno: 0 error:  
+2017-08-17 17:24:23 [ time:0.1032280921936 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [GwA83a0857vr18]"} 
+errorno: 0 error:  
+2017-08-17 17:24:25 [ time:0.089704990386963 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [Bt8Jsa0860vr25]"} 
+errorno: 0 error:  
+2017-08-17 17:24:33 [ time:0.092509984970093 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [rrZU.A0867vr25]"} 
+errorno: 0 error:  
+2017-08-17 17:24:45 [ time:0.11690092086792 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [UkaE60880vr25]"} 
+errorno: 0 error:  
+2017-08-17 17:25:29 [ time:0.11248302459717 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [SCfGJa0924vr21]"} 
+errorno: 0 error:  
+2017-08-17 17:25:31 [ time:0.096045017242432 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [Oj0Joa0926vr18]"} 
+errorno: 0 error:  
+2017-08-17 17:25:34 [ time:0.093723058700562 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [9JkU40928vr25]"} 
+errorno: 0 error:  
+2017-08-17 17:28:33 [ time:0.12147808074951 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [ARxoZa0108vr19]"} 
+errorno: 0 error:  
+2017-08-17 17:29:10 [ time:0.074426174163818 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [6lTgGA0145vr24]"} 
+errorno: 0 error:  
+2017-08-17 17:29:12 [ time:0.11559200286865 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [7VCWXa0146vr21]"} 
+errorno: 0 error:  
+2017-08-17 17:36:10 [ time:0.10314702987671 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":40055,"errmsg":"invalid button url domain hint: [xawhXa0565vr24]"} 
+errorno: 0 error:  
+2017-08-17 17:45:13 [ time:0.37565398216248 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-08-17 17:45:32 [ time:0.38718605041504 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=aridyoPsk0qkMKC3EAb6cTWpXfEW49SjhCSy0sOwHH8xvKCat89lN6V0xC-olreyWPNFWa2LukpDtnqFyXHVaBa69j_jX1bE8xC-wDlAAP1hIwfPiEp6LD4Lgo2IE8CDNPDbAAAACQ 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-08-18 19:00:42 [ time:0.11117887496948 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [gwAaSA0032e578]"} 
+errorno: 0 error:  
+2017-08-18 19:00:57 [ time:0.082442998886108 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [gA0047e514]"} 
+errorno: 0 error:  
+2017-08-18 19:01:13 [ time:0.094366788864136 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [P.pS9a0064e575]"} 
+errorno: 0 error:  
+2017-08-18 19:03:16 [ time:0.13333201408386 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [2jJ1Za0186e575]"} 
+errorno: 0 error:  
+2017-08-18 19:06:19 [ time:0.12944221496582 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [xLhSQa0369e544]"} 
+errorno: 0 error:  
+2017-08-18 19:08:47 [ time:0.095840215682983 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [oAxcEA0517nfo1]"} 
+errorno: 0 error:  
+2017-08-18 19:09:00 [ time:0.090205907821655 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [lZ3N1a0530e575]"} 
+errorno: 0 error:  
+2017-08-18 19:10:06 [ time:0.10403108596802 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [FxxZga0596e578]"} 
+errorno: 0 error:  
+2017-08-18 19:10:14 [ time:0.091393947601318 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [iEgWGa0604e578]"} 
+errorno: 0 error:  
+2017-08-18 19:11:39 [ time:0.1048309803009 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"errcode":40164,"errmsg":"invalid ip 218.2.216.1, not in whitelist hint: [mVgKTa0689e544]"} 
+errorno: 0 error:  
+2017-08-18 19:14:01 [ time:0.13933396339417 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"access_token":"JFZMRqLoT0A9g_IHJCJZlRuZsmslylEK-_e9kWDSbNJoeQv0QCttFLaus5llJSlNv9xI1-kRegRgsq4GCLw01wQ2jqIGDsA-U3WfYKuQ9RU0-RIHUAvMVX4F9MZUxAuuZCAcACAFIG","expires_in":7200} 
+errorno: 0 error:  
+2017-08-18 19:14:02 [ time:0.4119029045105 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=JFZMRqLoT0A9g_IHJCJZlRuZsmslylEK-_e9kWDSbNJoeQv0QCttFLaus5llJSlNv9xI1-kRegRgsq4GCLw01wQ2jqIGDsA-U3WfYKuQ9RU0-RIHUAvMVX4F9MZUxAuuZCAcACAFIG 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-08-18 19:14:24 [ time:0.53697395324707 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=JFZMRqLoT0A9g_IHJCJZlRuZsmslylEK-_e9kWDSbNJoeQv0QCttFLaus5llJSlNv9xI1-kRegRgsq4GCLw01wQ2jqIGDsA-U3WfYKuQ9RU0-RIHUAvMVX4F9MZUxAuuZCAcACAFIG 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/\"},{\"name\":\"\u6211\",\"type\":\"view\",\"url\":\"http:\\\/\\\/weixinbook.ngrok.cc\\\/m\\\/user\\\/index\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  

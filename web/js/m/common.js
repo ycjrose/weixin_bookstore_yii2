@@ -97,3 +97,30 @@ Date.prototype.Format = function(fmt)
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
     return fmt;
 };
+
+/**
+ * 提交表单操作
+ */ 
+$('#button-submit').click(function(){
+
+    var postData = {};
+    $('#weixin-form :input').each(function(){
+       postData[$(this).attr('name')] = $(this).val();
+    });
+
+    //将获得的post传到服务器
+    //console.log(postData);
+    var url = SCOPE.save_url;
+    var jump_url = SCOPE.jump_url;
+    $.post(url,postData,function(result){
+        if(result.code === -1){
+            //失败
+            dialog.error(result.msg);
+        }
+        if(result.code === 200){
+            //成功
+            dialog.success(result.msg,jump_url);
+        }
+        
+    },'JSON');
+});

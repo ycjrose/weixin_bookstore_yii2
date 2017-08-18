@@ -6,7 +6,7 @@ use app\modules\web\common\BaseController;
 use app\models\User;
 use app\common\services\UrlService; 
 
-class UserController extends BaseController{
+class UserController extends BaseController{    
 
     public function actionLogin(){
         //登陆页面
@@ -44,18 +44,21 @@ class UserController extends BaseController{
     	//编辑当前登陆人信息的页面
         if(\Yii::$app->request->isPost){
             //修改信息提交处理
-            $nickname = trim($this->post('nickname'));
-            $email = trim($this->post('email'));
-            if(!$nickname || !$email){
+            $all_post = [
+                'nickname' => trim($this->post('nickname')),
+                'avatar' => trim($this->post('avatar')),
+                'email' => trim($this->post('email')),
+                'updated_time' => date('Y:m:d H:i:s'),
+            ];
+
+            if(!$all_post['nickname'] || !$all_post['email']){
                 return $this->renderJson(-1,'邮箱或名字不能为空');
             }
-            if(!preg_match('/\w+[@]{1}\w+[.]\w+/', $email)){
+            if(!preg_match('/\w+[@]{1}\w+[.]\w+/', $all_post['email'])){
                 return $this->renderJson(-1,'邮箱格式错误');
             }
             $user_info = $this->current_user;
-            $user_info->nickname = $nickname;
-            $user_info->email = $email;
-            $user_info->updated_time = date('Y:m:d H:i:s');
+            $user_info->setAttributes($all_post);
             $user_info->update(0);
             return $this->renderJson(200,'更新成功');
         }

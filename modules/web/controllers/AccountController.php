@@ -1,8 +1,8 @@
 <?php
 
 namespace app\modules\web\controllers;
-
-use app\modules\web\common\BaseController;
+ 
+use app\modules\web\common\BaseController; 
 
 use app\models\User;
 
@@ -13,10 +13,6 @@ use app\common\services\UrlService;
 use app\common\services\ContactService;
 
 class AccountController extends BaseController{
-    public function __construct($id, $module, $config = []){
-        parent::__construct($id, $module, $config = []);
-        $this->layout = 'main';
-    }
 
     public function actionIndex(){
     	//账户列表
@@ -69,50 +65,59 @@ class AccountController extends BaseController{
     	//用户编辑或添加
         if(\Yii::$app->request->isPost){
             //提交表单操作
-            $post_pwd = trim($this->post('login_pwd'));
-            $post_login_name = trim($this->post('login_name'));
-            if(!trim($this->post('nickname'))){
+            $all_post = [
+                'nickname' => trim($this->post('nickname')),
+                'avatar' => trim($this->post('avatar')),
+                'mobile' => trim($this->post('mobile')),
+                'email' => trim($this->post('email')),
+                'login_name' => trim($this->post('nickname')),
+                'login_pwd' => trim($this->post('login_pwd')),
+                'uid' => intval($this->post('uid')),
+            ];
+
+            if(!$all_post['nickname']){
                 return $this->renderJson(-1,'姓名不能为空');
             }
-            if(!preg_match('/\w+[@]{1}\w+[.]\w+/',trim($this->post('email')))){
+
+            if(!preg_match('/\w+[@]{1}\w+[.]\w+/',$all_post['email'])){
                 return $this->renderJson(-1,'邮箱格式不正确');
             }
-            if(!$post_login_name){
+            if(!$all_post['login_name']){
                 return $this->renderJson(-1,'登录名不能为空');
             }
-            if(!$post_pwd){
+            if(!$all_post['login_pwd']){
                 return $this->renderJson(-1,'密码不能为空');
             }
 
-            //判断是更新还是新插入（是否有$_POST['uid']）
+            //判断是更新还是新插入（是否有$all_post['uid']）
             if($uid = $this->post('uid')){
                 //更新
                 $user_info = User::find()->where(['uid' => $uid])->one();
-                unset($_POST['uid']);
-                $_POST['updated_time'] = date('Y:m:d H:i:s');
+                unset($all_post['uid']);
+                $all_post['updated_time'] = date('Y:m:d H:i:s');
                 //判断密码有没有修改
-                if($post_pwd != ContactService::$default_pwd){
-                    $_POST['login_pwd'] = $user_info->getSaltPwd($post_pwd);
+                if($all_post['login_pwd'] != ContactService::$default_pwd){
+                    $all_post['login_pwd'] = $user_info->getSaltPwd($all_post['login_pwd']);
                 }else{
-                    unset($_POST['login_pwd']);
+                    unset($all_post['login_pwd']);
                 }
                 
-                $user_info->setAttributes($_POST);
+                $user_info->setAttributes($all_post);
                 $user_info->update(0);
                 return $this->renderJson(200,'更新成功');
             }
             //插入
             //判断用户名是否存在
-            $save_user = User::find()->where(['login_name' => $post_login_name])->asArray()->one();
-            if($post_login_name == $save_user['login_name']){
+            $save_user = User::find()->where(['login_name' => $all_post['login_name']])->asArray()->one();
+            if($all_post['login_name'] == $save_user['login_name']){
                 return $this->renderJson(-1,'用户名已存在');
             }
 
             $user = new User();
             $user->setSalt();
-            $_POST['created_time'] = date('Y:m:d H:i:s');
-            $_POST['login_pwd'] = $user->getSaltPwd($post_pwd);
-            $user->setAttributes($_POST);
+            $all_post['created_time'] = date('Y:m:d H:i:s');
+            $all_post['login_pwd'] = $user->getSaltPwd($all_post['login_pwd']);
+            $user->setAttributes($all_post);
             $user->save(0);
             return $this->renderJson(200,'新增成功');
 

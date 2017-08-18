@@ -2,16 +2,22 @@
 
 namespace app\modules\m\controllers;
 
-use yii\web\Controller;
+use app\modules\m\common\BaseController;
 
-class DefaultController extends Controller{
-	public function __construct($id, $module, $config = []){
-	    parent::__construct($id, $module, $config = []);
-	    $this->layout = 'main';
-	}
+use app\models\brand\BrandSetting;
+use app\models\brand\BrandImages;
+
+
+class DefaultController extends BaseController{
+
     public function actionIndex()
     {
     	//品牌首页
-        return $this->render('index');
+    	$brand_info = BrandSetting::find()->asArray()->one();
+    	$images = BrandImages::find()->orderBy(['id' => SORT_DESC])->asArray()->all();
+        return $this->render('index',[
+        	'brand_info' => $brand_info,
+        	'images' => $images,
+        ]);
     }
 }

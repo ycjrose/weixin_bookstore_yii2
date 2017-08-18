@@ -27,4 +27,10 @@ class UrlService {
 	public static function buildNullUrl(){
 		return 'javascript:void(0);';
 	}
+
+	//站内图片链接
+	public static function buildPicUrl($bucket,$image_key){
+		$upload_config = \Yii::$app->params['upload'];
+		return $upload_config[$bucket].'/'.$image_key;
+	}
 }

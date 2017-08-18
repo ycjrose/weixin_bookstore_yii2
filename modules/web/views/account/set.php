@@ -1,10 +1,10 @@
 <?php
-use app\common\services\UrlService;
+use app\common\services\UrlService; 
 use app\common\services\ContactService;
 use app\common\services\StaticService;
 StaticService::includeAppJs('/js/web/account/set.js',app\assets\WebAsset::className());
 ?>
-<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_account_common.php',['current' => '']);?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/account/tab_common_account.php',['current' => '']);?>
 
 <div class="row m-t  wrap_account_set">
 	<div class="col-lg-12">
@@ -14,6 +14,26 @@ StaticService::includeAppJs('/js/web/account/set.js',app\assets\WebAsset::classN
 				<label class="col-lg-2 control-label">姓名:</label>
 				<div class="col-lg-10">
 					<input type="text" name="nickname" class="form-control" placeholder="请输入姓名~~" value="<?=$user_info?$user_info['nickname']:'';?>">
+				</div>
+			</div>
+			<div class="hr-line-dashed"></div>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">个人头像:</label>
+				<div class="col-lg-10">
+                    <form class="upload_pic_wrap" target="upload_file" enctype="multipart/form-data" method="POST" action="<?=UrlService::buildWebUrl('/upload/pic');?>">
+                        <div class="upload_wrap pull-left">
+                            <i class="fa fa-upload fa-2x"></i>
+                            <input type="hidden" name="bucket" value="avatar" />
+                            <input type="file" name="pic" >
+                        </div>
+                        <?php if($user_info['avatar']):?>
+						<span class="pic-each">
+							<img src="<?=UrlService::buildPicUrl('avatar',$user_info['avatar']);?>">
+							<input type="hidden" name="avatar" value="<?=$user_info['avatar'];?>" />
+							<span class="fa fa-times-circle del del_image" ><i></i></span>
+						</span>
+						<?php endif;?>
+					</form>
 				</div>
 			</div>
 			<div class="hr-line-dashed"></div>
@@ -62,3 +82,4 @@ StaticService::includeAppJs('/js/web/account/set.js',app\assets\WebAsset::classN
 		'jump_url':'<?=UrlService::buildWebUrl('/account')?>',
 	}
 </script>
+<iframe class="hide" name="upload_file"></iframe>

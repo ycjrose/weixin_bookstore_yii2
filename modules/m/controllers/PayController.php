@@ -2,14 +2,11 @@
 
 namespace app\modules\m\controllers;
 
-use yii\web\Controller;
+use app\modules\m\common\BaseController;
 
 
-class PayController extends Controller{
-	public function __construct($id, $module, $config = []){
-	    parent::__construct($id, $module, $config = []);
-	    $this->layout = 'main';
-	}
+class PayController extends BaseController{
+
     public function actionBuy()
     {
     	//购买支付页面

@@ -8,6 +8,10 @@ class ContactService{
 		'1' => '正常',
 		'0' => '已删除',
 	];
-
+	public static $sex = [
+		'1' => '男',
+		'2' => '女',
+		'0' => '未填写',
+	];
 	public static $default_pwd = '&&&&&&';
 }
