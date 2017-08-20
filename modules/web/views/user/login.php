@@ -26,7 +26,7 @@ use app\common\services\UrlService;
 						<input type="password" name="login_pwd" class="form-control" placeholder="请输入登录密码">
 					</div>
 					<button id="button-submit" class="btn btn-primary block full-width m-b">登录</button>
-                    <h3>账号和密码请关注左侧服务号 回复"<span class="text-danger">商城账号</span>"获取，每日更新一次 </h3>
+                    <h3>账号和密码请关注左侧服务号 回复"<span class="text-danger">账号</span>"获取，每日更新一次 </h3>
 				</div>
 			</div>
 		</div>
@@ -34,7 +34,7 @@ use app\common\services\UrlService;
 	<hr>
 	<div class="row">
 		<div class="col-md-6">
-            图书商城管理系统 <a href="http://47.93.59.20/" target="_blank"> 技术支持 </a>
+            图书展示系统 <a href="http://47.93.59.20/" target="_blank"> 技术支持 </a>
 		</div>
 		<div class="col-md-6 text-right">
 			<small>© 2017</small>
