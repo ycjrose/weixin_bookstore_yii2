@@ -7,7 +7,7 @@ use app\common\services\UrlService;
 		<div class="col-md-6 text-center">
 			<h2 class="font-bold">ycj图书商城管理后台</h2>
 			<p>
-				<img src="<?=UrlService::buildWwwUrl('/images/common/qrcode.jpg');?>" width="300px"/>
+				<img src="<?=UrlService::buildWwwUrl('/images/common/qrcode2.jpg');?>" width="300px"/>
 			</p>
             <p class="text-danger">
                 扫描关注查看Demo
