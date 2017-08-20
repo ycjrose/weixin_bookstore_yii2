@@ -1,0 +1,7 @@
+<xml>
+                            <ToUserName><![CDATA[o2Zz0wplpew1Q5HSSTZhLSECnmAU]]></ToUserName>
+                            <FromUserName><![CDATA[gh_768950528a16]]></FromUserName>
+                            <CreateTime>1503150588</CreateTime>
+                            <MsgType><![CDATA[text]]></MsgType>
+                            <Content><![CDATA[请输入正确的内容]]></Content>
+                            </xml>

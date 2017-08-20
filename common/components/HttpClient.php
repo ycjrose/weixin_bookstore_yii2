@@ -49,11 +49,8 @@ class HttpClient  extends  BaseService{
         }
 
         if(!empty(self::$headers)){
-            $headerArr = [];
-            foreach( self::$headers as $n => $v ) {
-                $headerArr[] = $n .': ' . $v;
-            }
-            curl_setopt ($curl, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
+            
+            curl_setopt ($curl, CURLOPT_HTTPHEADER , self::$headers );  //构造IP
         }
 
         if( self::$cookie ){
