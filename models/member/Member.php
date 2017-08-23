@@ -10,7 +10,7 @@ use Yii;
  * @property string $id
  * @property string $nickname
  * @property string $mobile
- * @property integer $sex
+ * @property integer $sex 
  * @property string $avatar
  * @property string $salt
  * @property string $reg_ip
@@ -23,6 +23,19 @@ class Member extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+
+    //生成随机秘钥
+    public function setSalt($length = 16){
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$^&*%';
+        $salt = '';
+        for ($i=0; $i < $length; $i++) { 
+            $salt .= $chars[mt_rand(0,strlen($chars)-1)]; 
+        }
+        $this->salt = $salt;
+    }
+
+    
     public static function tableName()
     {
         return 'member';

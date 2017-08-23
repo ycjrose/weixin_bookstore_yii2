@@ -31,8 +31,8 @@ StaticService::includeAppJs('/js/m/user/bind.js',app\assets\MAsset::className())
 </div>
 <script type="text/javascript">
     var SCOPE = {
-        'save_url':'<?=UrlService::buildWwwUrl('/default/login');?>',
-        'jump_url':'<?=UrlService::buildMUrl('/user');?>',
-        'captcha_url':'<?=UrlService::buildWwwUrl('/default/get_captcha');?>'
+        'save_url':'<?=UrlService::buildMUrl('/user/bind');?>',
+        'jump_url':'<?=UrlService::buildMUrl('/user/index');?>',
+        'captcha_url':'<?=UrlService::buildWwwUrl('/default/get_captcha');?>',
     }
 </script>

@@ -1,4 +1,6 @@
 <?php 
+use \app\common\services\UrlService;
+use \app\common\services\UtilService;
 use app\assets\MAsset;
 MAsset::register($this);
 $this->beginPage();
@@ -18,18 +20,20 @@ $this->beginPage();
 <body>
 <?php $this->beginBody();?>
 <!--不同的部分begin-->
-
+ 
 <?=$content;?>
 
 <!--不同的部分end-->
 <div class="copyright clearfix">
-            <p class="name">欢迎您</p>
+        <?php if( isset( $this->params['current_user'] ) ):?>
+            <p class="name">欢迎您，<?=UtilService::encode( $this->params['current_user']["nickname"] );?></p>
+        <?php endif;?>
         <p class="copyright">由<a href="/" target="_blank">ycj</a>提供技术支持</p>
 </div>
 <div class="footer_fixed clearfix">
-    <span><a href="/m/" class="default"><i class="home_icon"></i><b>首页</b></a></span>
-    <span><a href="/m/product/index" class="product"><i class="store_icon"></i><b>图书</b></a></span>
-    <span><a href="/m/user/index" class="user"><i class="member_icon"></i><b>我的</b></a></span>
+    <span><a href="<?=UrlService::buildMUrl("/default");?>" class="default"><i class="home_icon"></i><b>首页</b></a></span>
+    <span><a href="<?=UrlService::buildMUrl("/product");?>" class="product"><i class="store_icon"></i><b>图书</b></a></span>
+    <span><a href="<?=UrlService::buildMUrl("/user");?>" class="user"><i class="member_icon"></i><b>我的</b></a></span>
 </div>
 <?php $this->endBody();?>
 </body>

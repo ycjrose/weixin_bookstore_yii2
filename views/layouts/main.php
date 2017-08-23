@@ -11,7 +11,7 @@ AppAsset::register($this);
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ycj微信图书展示</title>
+    <title>ycj的图书展示</title>
     <?php $this->head();?>
 </head>
 <body>

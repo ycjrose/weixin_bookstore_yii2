@@ -119,7 +119,12 @@ $('#button-submit').click(function(){
         }
         if(result.code === 200){
             //成功
-            dialog.success(result.msg,jump_url);
+            if(result['data'] != ''){
+                window.location.href = result['data']['url'];
+            }else{
+                window.location.href = jump_url;
+            }
+            
         }
         
     },'JSON');

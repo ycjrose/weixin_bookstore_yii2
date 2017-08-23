@@ -18,7 +18,7 @@ class MenuController extends BaseWebController{
 		$menu = [
 			'button' => [
 				[
-					'name' => '商城',
+					'name' => '商城信息',
 					'type' => 'view',
 					'url' => $button_url['windows'].UrlService::buildMUrl('/default/index'),
 				],
@@ -33,6 +33,7 @@ class MenuController extends BaseWebController{
 		$config = \Yii::$app->params['weixin'];
 		RequestService::setConfig($config['appid'],$config['token'],$config['sk']);
 		$access_token = RequestService::getAccessToken();
+		var_dump(RequestService::getErrMsg());
 		if($access_token){
 			$url = 'menu/create?access_token='.$access_token;
 			$res = RequestService::send($url,json_encode($menu,JSON_UNESCAPED_UNICODE),'POST');

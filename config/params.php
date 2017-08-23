@@ -8,8 +8,8 @@ return [
     	'book' => '/uploads/book',
     ],
     'domain' => [
-        'windows' => 'http://weixinbook.ngrok.cc',
-        'linux' => 'http://47.93.59.20:8086',
+        'windows' => 'http://ycjbook.tunnel.echomod.cn',
+        'linux' => 'http://www.ycjblog.top',
     ],
     'weixin' => [
     	'appid' => 'wxc1d2aa71e4cd80dd',

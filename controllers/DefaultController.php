@@ -9,7 +9,7 @@ use app\models\sms\SmsCaptcha;
 */
 class DefaultController extends BaseWebController{
 
-	private $captcha_cookie_name = 'ValidateCode'; 
+	private  $captcha_cookie_name = 'ValidateCode'; 
 
 	public function actionIndex(){
 		
@@ -37,32 +37,13 @@ class DefaultController extends BaseWebController{
 			return $this->renderJson(-1,'请过一分钟后重试！');
 		}
 		$model_sms = new SmsCaptcha();
+		//接入发短信的接口
 		$model_sms->buildSmsCaptcha($mobile,UtilService::getIP());
 		if($model_sms){
-			//接入发短信的接口
 			return $this->renderJson(200,'发送成功'.$model_sms->captcha);
 		}
 		return $this->renderJson(-1,'系统出错');
 	}
-	//验证绑定是否成功
-	public function actionLogin(){
-		$all_post = [
-			'mobile' => trim($this->post('mobile')),
-			'img_captcha' => trim($this->post('img_captcha')),
-			'captcha_code' => trim($this->post('captcha_code')),
-		];
-		//验证图形验证码是否正确
-		$img_captcha = $this->getCookie($this->captcha_cookie_name);
-		if(strtolower($all_post['img_captcha']) != $img_captcha){
-			return $this->renderJson(-1,'图形验证码不正确,请刷新验证码重试');
-		}
-		//手机验证码是否正确
-		$model_sms = new SmsCaptcha();
-		if(!$model_sms->checkSmsCaptcha($all_post['mobile'],$all_post['captcha_code'])){
-			return $this->renderJson(-1,'手机验证码错误');
-		}
-		$this->removeCookie($this->captcha_cookie_name);
-		return $this->renderJson(200,'登陆成功');
-	}
+	
 
 }

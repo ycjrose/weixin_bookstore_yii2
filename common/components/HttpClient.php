@@ -87,7 +87,7 @@ class HttpClient  extends  BaseService{
         file_put_contents($log,date('Y-m-d H:i:s')." [ time:{$calculate_time_span} ] url: {$url} \nmethod: {$method} \ndata: ".json_encode($param)." \nresult: {$info} \nerrorno: {$_errno} error: {$_error} \n",FILE_APPEND);
 
         if( $_error ){
-            return self::_err( $_error );
+            return self::_err( -1,$_error );
         }
 
         return $info;

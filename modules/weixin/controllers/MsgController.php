@@ -8,6 +8,7 @@ use app\common\components\HttpClient;
 
 class MsgController extends BaseController{
 
+
     public function actionIndex()
     {  
 
@@ -83,19 +84,19 @@ class MsgController extends BaseController{
 
             }else{
                 //发送文本消息
-                if(strpos( $vipSay,'天气' ) !== false){
-                    //调用第三方天气接口
-                    $data = 'theCityCode='.mb_substr( $vipSay,0,mb_strlen($vipSay) - 2).'&theUserID=';
-                    HttpClient::setHeader([
-                        'application/x-www-form-urlencoded;charset=utf-8',
-                        'Content-Length:'.strlen($data),
-                    ]);
-                    $url = 'ws.webxml.com.cn/WebServices/WeatherWS.asmx/getWeather';
-                    $res = HttpClient::post($url,$data);
-                    $resArr = (array)simplexml_load_string($res, 'SimpleXMLElement', LIBXML_NOCDATA);
-                    $content = $resArr['string'][0]."\n".$resArr['string'][3]."\n".$resArr['string'][4]."\n".$resArr['string'][5];
+                // if(strpos( $vipSay,'天气' ) !== false){
+                //     //调用第三方天气接口
+                //     $data = 'theCityCode='.mb_substr( $vipSay,0,mb_strlen($vipSay) - 2).'&theUserID=';
+                //     HttpClient::setHeader([
+                //         'application/x-www-form-urlencoded;charset=utf-8',
+                //         'Content-Length:'.strlen($data),
+                //     ]);
+                //     $url = 'ws.webxml.com.cn/WebServices/WeatherWS.asmx/getWeather';
+                //     $res = HttpClient::post($url,$data);
+                //     $resArr = (array)simplexml_load_string($res, 'SimpleXMLElement', LIBXML_NOCDATA);
+                //     $content = $resArr['string'][0]."\n".$resArr['string'][3]."\n".$resArr['string'][4]."\n".$resArr['string'][5];
 
-                }else{
+                // }else{
                     switch ($vipSay) {
                         case '客服电话':
                             $content = '客服ycj:13255287051';
@@ -107,7 +108,7 @@ class MsgController extends BaseController{
                             $content = '请输入正确的内容';
                             break;
                     }
-                }
+                //}
                 
                 return $this->sendTextMsg($postObj,$content);
             }
