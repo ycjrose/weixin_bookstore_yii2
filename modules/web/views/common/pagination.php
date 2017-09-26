@@ -6,7 +6,7 @@ use app\common\services\UrlService;
 		<span class="pagination_count" style="line-height: 40px;">共<?=$pages['page_count']?>条记录 | 每页<?=$pages['page_size'];?>条</span>
 		<ul class="pagination pagination-lg pull-right" style="margin: 0 0 ;">
             <?php for($i = 1;$i <= $pages['page_total'];$i++):?>
-			<li <?php if($pages['p'] == $i):?>class="active"<?php endif;?>>
+			<li <?php if($pages['p'] == $i):?> class="active" <?php endif;?>>
                 <a href="<?=UrlService::buildWebUrl($url,[
                     'p' => $i,
                     'status' => $search_conditions['status'],
@@ -15,4 +15,4 @@ use app\common\services\UrlService;
             </li>
             <?php endfor;?>
         </ul>
-	</div>
+</div>

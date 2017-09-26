@@ -642,4 +642,6 @@ input[type='checkbox']:checked + label:after, input[type='checkbox']:checked + l
     .patch_op .quantity-form{left:45px; top:30px;}
 }
 
-
+.has_faved i{
+  background-color:yellow;
+}

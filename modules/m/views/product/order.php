@@ -1,3 +1,9 @@
+<?php
+use \app\common\services\UrlService;
+use \app\common\services\UtilService;
+use \app\common\services\StaticService;
+StaticService::includeAppJs( "/js/m/product/order.js",\app\assets\MAsset::className() );
+?>
 <div style="min-height: 500px;">
 	<div class="page_title clearfix">
     <span>订单提交</span>
@@ -27,19 +33,21 @@
 		<h2>确认订单信息</h2>
 	</div>
 		<ul class="order_list">
-				<li data="4" data-quantity="1">
-			<a href="/m/product/info?id=4">
+			<?php foreach($books as $book_info):?>
+			<li data="<?=$book_info['id']?>" data-quantity="<?=$book_info['quantity']?>">
+			<a href="<?=UrlService::buildMUrl('/product/info',['id' => $book_info['id']]);?>">
 				<i class="pic">
-					<img src="/uploads/book/20170316/d7330817f6279b882d57157ebeec7816.jpg" style="width: 100px;height: 100px;"/>
+					<img src="<?=UrlService::buildPicUrl('book',$book_info['main_image']);?>" style="width: 100px;height: 100px;"/>
 				</i>
-				<h2>Hadoop权威指南(第3版) x 1</h2>
+				<h2><?=UtilService::encode($book_info['name']);?> x <?=$book_info['quantity'];?></h2>
 				<h4>&nbsp;</h4>
-				<b>¥ 78.20</b>
+				<b>¥ <?=$book_info['price']?></b>
 			</a>
-		</li>
-			</ul>
+			</li>
+			<?php endforeach;?>
+		</ul>
 		<div class="order_header" style="border-top: 1px dashed #ccc;">
-		<h2>总计：78.20</h2>
+		<h2>总计：<?=$total_price;?></h2>
 	</div>
 </div>
 <div class="op_box">

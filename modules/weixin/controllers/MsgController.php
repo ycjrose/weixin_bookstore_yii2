@@ -1,16 +1,26 @@
 <?php
 
 namespace app\modules\weixin\controllers;
-
 use app\modules\weixin\common\BaseController;
-
+use app\common\services\UrlService;
+use app\models\book\Book;
+use yii\log\FileTarget;
 use app\common\components\HttpClient;
+use app\common\services\weixin\TemplateService;
 
 class MsgController extends BaseController{
 
+      public function actionTest(){
+           //$vipSay = '南京天气';
+           // $res = TemplateService::payNotice(2);
+           // if(!$res){
+           //      var_dump(TemplateService::getErrMsg()) ;
+           // }
+       
+      }
 
-    public function actionIndex()
-    {  
+
+    public function actionIndex(){  
 
         if($this->checkSignature() && $_GET['echostr']){
             //用于微信第一次认证
@@ -22,17 +32,13 @@ class MsgController extends BaseController{
            
        
     }
-    //接受时间推送并回复
+    //接受推送并回复
     public function SendMsg(){
+
         $postStr = file_get_contents('php://input');
+        //$this->record_log('[xml:]'.$postStr);
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-        // <xml>
-        // <ToUserName><![CDATA[toUser]]></ToUserName>
-        // <FromUserName><![CDATA[FromUser]]></FromUserName>
-        // <CreateTime>123456789</CreateTime>
-        // <MsgType><![CDATA[event]]></MsgType>
-        // <Event><![CDATA[subscribe]]></Event>
-        // </xml>
+
         //如果是订阅事件
         if(strtolower($postObj->MsgType) == 'event'){
             //关注事件
@@ -49,7 +55,7 @@ class MsgController extends BaseController{
                 $fromUser = $postObj->ToUserName;
                 $time = time();
                 $msgType = 'text';
-                $content = '欢迎关注ycj的公众号！';
+                $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书";
                 $send_info = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);
                 
                 return $send_info;
@@ -58,59 +64,85 @@ class MsgController extends BaseController{
         //如果是用户发来的消息
         if(strtolower($postObj->MsgType) == 'text'){
             $vipSay = trim($postObj->Content);
-            if($vipSay == '推荐'){
-                //发送图文消息
-               $imageMsgs = [
-                   [
-                       'title' => 'ycj的博客',
-                       'description' => '个人的记录与总结',
-                       'picUrl' => 'http://47.93.59.20/upload/2017/08/03/5982aaaec2be5.jpg',
-                       'url' => 'http://47.93.59.20/',
-                   ],
-                   [
-                       'title' => '百度',
-                       'description' => 'baidu',
-                       'picUrl' => 'http://47.93.59.20/upload/2017/08/03/5982aaaec2be5.jpg',
-                       'url' => 'http://www.baidu.com',
-                   ],
-                   [
-                       'title' => 'qq',
-                       'description' => 'qq',
-                       'picUrl' => 'http://47.93.59.20/upload/2017/08/03/5982aaaec2be5.jpg',
-                       'url' => 'http://www.qq.com',
-                   ],
-               ];
+
+            if(mb_strpos($vipSay,'#') === 0){
+                //查询图书信息然后发图文
+                $vipSay = mb_substr($vipSay, 1);
+                $res = $this->search($vipSay);
+                if(!$res){
+                    $content = '该图书不存在';
+                    return $this->sendTextMsg($postObj,$content);
+                }
+                $imageMsgs = [];
+                foreach ($res as $value) {
+                    $imageMsgs[] = [
+                        'title' => $value['name'],
+                        'description' => mb_substr( strip_tags( $value['summary'] ),0,20,"utf-8" ),
+                        'picUrl' => \Yii::$app->params['domain'].UrlService::buildPicUrl( "book",$value['main_image'] ),
+                        'url' => \Yii::$app->params['domain'].UrlService::buildMUrl( "/product/info",[ 'id' => $value['id'] ] ),
+                    ];
+                }
+
                return $this->sendImageMsg($postObj,$imageMsgs);
 
-            }else{
-                //发送文本消息
-                // if(strpos( $vipSay,'天气' ) !== false){
-                //     //调用第三方天气接口
-                //     $data = 'theCityCode='.mb_substr( $vipSay,0,mb_strlen($vipSay) - 2).'&theUserID=';
-                //     HttpClient::setHeader([
-                //         'application/x-www-form-urlencoded;charset=utf-8',
-                //         'Content-Length:'.strlen($data),
-                //     ]);
-                //     $url = 'ws.webxml.com.cn/WebServices/WeatherWS.asmx/getWeather';
-                //     $res = HttpClient::post($url,$data);
-                //     $resArr = (array)simplexml_load_string($res, 'SimpleXMLElement', LIBXML_NOCDATA);
-                //     $content = $resArr['string'][0]."\n".$resArr['string'][3]."\n".$resArr['string'][4]."\n".$resArr['string'][5];
+            }
+            else{
 
-                // }else{
-                    switch ($vipSay) {
-                        case '客服电话':
-                            $content = '客服ycj:13255287051';
-                            break;
-                        case '博客':
-                            $content = '<a href="http://47.93.59.20/">点击博客地址</a>';
-                            break;
-                        default:
-                            $content = '请输入正确的内容';
-                            break;
+                    // switch ($vipSay) {
+                    //     case '客服电话':
+                    //         $content = '客服ycj:13255287051';
+                    //         break;
+                    //     case '博客':
+                    //         $content = '<a href="http://www.ycjblog.top:8086/">点击博客地址</a>';
+                    //         break;
+                    //     default:
+                    //         $content = '请输入正确的内容';
+                    //         break;
+                    // }
+                //接入图灵机器人
+                $tuling_url = 'http://www.tuling123.com/openapi/api';
+                $key = \Yii::$app->params['tuling_key'];
+                $array_data = [
+                    'key' => $key,
+                    'info' => $vipSay,
+                    'userid' => $postObj->FromUserName,
+                ];
+                $json_data = json_encode($array_data,JSON_UNESCAPED_UNICODE);
+                HttpClient::setHeader(['Content-Type: application/json; charset=UTF-8']);
+                $res = HttpClient::post($tuling_url,$json_data);
+                $res = @json_decode($res,true);
+                if(!$res){
+
+                    $content = '机器人小姐故障啦~~';
+
+                }elseif(isset($res['url'])){//有url的回答
+
+                        $content = $res['text']."\n".$res['url'];
+                    
+                }elseif(isset($res['list'])){//多条复杂信息则发送图文消息（例如想看今天新闻）
+
+                    $imageMsgs = [];
+                    foreach ($res['list'] as $_item) {
+                        if(isset($_item['article'])){
+                            $title = $_item['article'];
+                        }
+                        if(isset($_item['name'])){
+                            $title = $_item['name'];
+                        }
+                        $imageMsgs[] = [
+                            'title' => isset($title) ? $title : '默认标题',
+                            'description' => '内容请点进链接细看',
+                            'picUrl' => $_item['icon'],
+                            'url' => $_item['detailurl'],
+                        ];
                     }
-                //}
-                
+                    return $this->sendImageMsg($postObj,$imageMsgs);
+
+                }else{//只有文本消息的回答
+                    $content = $res['text'];
+                }  
                 return $this->sendTextMsg($postObj,$content);
+
             }
 
             
@@ -119,6 +151,16 @@ class MsgController extends BaseController{
 
        
     }
+    //从数据库查询图书信息
+    private function search( $kw ){
+        $query = Book::find()->where([ 'status' => 1 ]);
+        $where_name = [ 'LIKE','name','%'. $kw .'%', false ];
+        $where_tag = [ 'LIKE','tags','%'. $kw .'%', false ];
+        $query->andWhere([ 'OR',$where_name,$where_tag ]);
+        $res = $query->orderBy([ 'id' => SORT_DESC ])->limit( 3 )->all();
+        return $res;
+    }
+    //第一次微信认证
     public function checkSignature(){
     	$signature = trim($this->get('signature'));
     	$timestamp = trim($this->get('timestamp'));
@@ -133,5 +175,18 @@ class MsgController extends BaseController{
     	}else{
     		return false;
     	}
+    }
+    //记录错误日志，方便调试
+    public function record_log($msg){
+        $log = new FileTarget();
+        $log->logFile = \Yii::$app->getRuntimePath() . "/logs/weixin_msg_".date("Ymd").".log";
+        $request_uri = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:'';
+        $log->messages[] = [
+            "[url:{$request_uri}][post:".http_build_query($_POST)."] [msg:{$msg}]",
+            1,
+            'application',
+            microtime(true)
+        ];
+        $log->export();
     }
 }

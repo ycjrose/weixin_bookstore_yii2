@@ -1,8 +1,9 @@
 <?php 
 use \app\common\services\UrlService;
 use \app\common\services\UtilService;
-use app\assets\MAsset;
+use app\assets\MAsset; 
 MAsset::register($this);
+$upload_config = \Yii::$app->params['upload'];
 $this->beginPage();
 ?>
 <!DOCTYPE html>
@@ -34,6 +35,13 @@ $this->beginPage();
     <span><a href="<?=UrlService::buildMUrl("/default");?>" class="default"><i class="home_icon"></i><b>首页</b></a></span>
     <span><a href="<?=UrlService::buildMUrl("/product");?>" class="product"><i class="store_icon"></i><b>图书</b></a></span>
     <span><a href="<?=UrlService::buildMUrl("/user");?>" class="user"><i class="member_icon"></i><b>我的</b></a></span>
+</div>
+
+<div class="hidden_layout_wrap hide">
+    <input type="hidden" name="upload_config" value='<?=json_encode($upload_config);?>' > 
+</div>
+<div class="hidden_layout_wrap hide">
+    <input type="hidden" id="share_info" value='<?=\Yii::$app->getView()->params['share_info'];?>' > 
 </div>
 <?php $this->endBody();?>
 </body>

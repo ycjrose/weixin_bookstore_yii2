@@ -16,11 +16,13 @@ class MAsset extends AssetBundle
 	        'css/m/app.css?ver='.RELEASE_VERSION,
     	];
     	$this->js = [
+            'https://res.wx.qq.com/open/js/jweixin-1.2.0.js',
 	    	'plugins/jquery-2.1.1.js',
 	    	'js/m/TouchSlide.1.1.js',
             'plugins/layer/layer.js',
             'plugins/dialog.js',
 	    	'js/m/common.js?ver='.RELEASE_VERSION,
+            'js/m/weixin.js?ver='.RELEASE_VERSION,
     	];
     	parent::registerAssetFiles($view);
     }

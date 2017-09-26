@@ -20,7 +20,7 @@ class OauthController extends BaseController{
 	public function actionLogin(){
 		$scope = $this->get('scope','snsapi_base');
 		$appid = \Yii::$app->params['weixin']['appid'];
-		$redirect_uri = \Yii::$app->params['domain']['windows'].UrlService::buildMUrl('/oauth/callback');
+		$redirect_uri = \Yii::$app->params['domain'].UrlService::buildMUrl('/oauth/callback');
 		$url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appid}&redirect_uri={$redirect_uri}&response_type=code&scope={$scope}&state=#wechat_redirect";
 		return $this->redirect($url);
 	}
@@ -44,13 +44,13 @@ class OauthController extends BaseController{
 
 		$this->setCookie( $this->auth_cookie_current_openid,$res_openid );
 		
-		//刚进页面只要openid，不授权然后跳转到首页
+		//刚进页面只要openid，不授权然后跳转到首页 
 		if($res_scope != 'snsapi_userinfo'){
 			return $this->goHome();
 		}
 		//授权过来
 		//判断是否在数据库已绑定你的openid
-		$reg_bind = OauthMemberBind::find()->where([ 'openid' => $res_openid,'type' => 1 ])->one();
+		$reg_bind = OauthMemberBind::find()->where([ 'openid' => $res_openid,'type' => 1 ])->orderBy(['id' => SORT_DESC])->one();
 		if($reg_bind){
 			//在进行绑定表和会员表之间的对应关系判断
 			$member_info = Member::findOne( [ 'id' => $reg_bind['member_id'],'status' => 1 ] );

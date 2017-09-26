@@ -6,7 +6,7 @@ $('input[name="name"]').blur(function(){
 		$('#button-submit').attr("disabled", false);
 	}
 });
-$('input[name="mobile"]').blur(function(){
+$('input[name="mobile"]').blur(function(){ 
 	if($.trim($(this).val()) == ''){
 		dialog.tips('品牌电话不能为空',this);
 		$('#button-submit').attr("disabled", true);

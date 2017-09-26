@@ -1,19 +1,16 @@
 <?php
 
 namespace app\modules\m\controllers;
-
 use app\modules\m\common\BaseController;
-
 use app\models\member\Member;
-
 use app\models\member\OauthMemberBind;
-
 use app\models\sms\SmsCaptcha;
-
+use app\models\book\Book;
+use app\models\pay\PayOrder;
+use app\models\pay\PayOrderItem;
 use app\common\services\UtilService;
-
 use app\common\services\UrlService;
-
+use app\common\services\ContactService;
 
 class UserController extends BaseController{
 
@@ -106,7 +103,48 @@ class UserController extends BaseController{
     }
     public function actionOrder(){
     	//我的订单页面
-    	return $this->render('order');
+        //所有的订单项（一个订单可以有多个商品）
+        $orders = PayOrder::find()->where(['member_id' => $this->current_user['id']])->orderBy(['id' => SORT_DESC])->asArray()->all();
+        $list = [];
+        if($orders){
+            //所有的订单的商品项
+            $pay_items = PayOrderItem::find()->where(['member_id' => $this->current_user['id'],'pay_order_id' => array_column($orders, 'id')])->orderBy(['id' => SORT_DESC])->asArray()->all();
+            //所有的订单书籍的信息
+            $books = Book::find()->where(['id' => array_column($pay_items, 'target_id')])->indexBy('id')->asArray()->all();
+            //对订单商品表按订单号进行分类存在数组里并构建前台需要的数组
+            $pay_items_table = [];
+            foreach ($pay_items as $_item) {
+                $book_info = $books[$_item['target_id']];
+                //如果还没有声明，则必须声明
+                if(!isset($pay_items_table[$_item['pay_order_id']])){
+                    $pay_items_table[$_item['pay_order_id']] = [];
+                }
+                $pay_items_table[$_item['pay_order_id']][] = [
+                    'price' => $_item['price'],
+                    'book_name' => $book_info['name'],
+                    'book_main_image' => $book_info['main_image'],
+                    'book_id' => $book_info['id'],
+                    'comment_status' => $_item['comment_status'],
+                ];
+            }
+            //按订单分类构建前台所需数组
+            foreach ($orders as $_order) {
+                $list[] = [
+                    'id' => $_order['id'],
+                    'sn' => $_order['order_sn'],
+                    'created_time' => $_order['created_time'],
+                    'pay_price' => $_order['pay_price'],
+                    'items' => $pay_items_table[$_order['id']],
+                    'status' => $_order['status'],
+                    'comment_status' => $_order['comment_status'],
+                    'express_status' => $_order['express_status'],
+                    'express_info' => $_order['express_info'],
+                    'pay_url' => UrlService::buildMUrl('/pay/buy/?pay_order_id='.$_order['id']),
+                ];
+            }
+        }
+
+    	return $this->render('order',['list' => $list]);
     }
     public function actionAddress(){
     	//我的收货地址

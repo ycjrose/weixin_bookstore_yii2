@@ -7,7 +7,7 @@ use app\modules\web\common\BaseController;
 use app\models\member\Member;
 
 use app\common\services\ContactService;
-
+ 
 use app\common\services\UrlService;
 
 class MemberController extends BaseController{
@@ -17,7 +17,7 @@ class MemberController extends BaseController{
         //搜索功能
         $status = intval($this->get('status',ContactService::$status_default));
         $mix_kw = trim($this->get('mix_kw'));
-        $p = intval($this->get('p'));
+        $p = intval($this->get('p',1));
         $query = Member::find();
         //按状态搜索
         if($status != ContactService::$status_default){

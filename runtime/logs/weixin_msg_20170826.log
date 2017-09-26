@@ -1,0 +1,23 @@
+
+2017-08-26 14:28:03 [127.0.0.1][-][-][error][application] [url:/weixin/msg/index?signature=6857ee18b0e74b491b2ca874944eb793adc982e8&timestamp=1503728858&nonce=209479128&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU][post:] [msg:[xml:]<xml><ToUserName><![CDATA[gh_768950528a16]]></ToUserName>
+<FromUserName><![CDATA[o2Zz0wplpew1Q5HSSTZhLSECnmAU]]></FromUserName>
+<CreateTime>1503728858</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[推荐]]></Content>
+<MsgId>6458466267578315102</MsgId>
+</xml>]
+2017-08-26 14:34:17 [127.0.0.1][-][-][error][application] [url:/weixin/msg/index?signature=44390cf30331af82219376bd2bf6444b0ea7e95d&timestamp=1503729232&nonce=950864279&openid=o2Zz0wlK4GpNElg3oSEajn8xl3lc][post:] [msg:[xml:]<xml><ToUserName><![CDATA[gh_768950528a16]]></ToUserName>
+<FromUserName><![CDATA[o2Zz0wlK4GpNElg3oSEajn8xl3lc]]></FromUserName>
+<CreateTime>1503729232</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[nndjd]]></Content>
+<MsgId>6458467873896083879</MsgId>
+</xml>]
+2017-08-26 14:36:14 [127.0.0.1][-][-][error][application] [url:/weixin/msg/index?signature=97d3bf4add23e20151aa6961b97090913b8b743f&timestamp=1503729349&nonce=493498873&openid=o2Zz0wlK4GpNElg3oSEajn8xl3lc][post:] [msg:[xml:]<xml><ToUserName><![CDATA[gh_768950528a16]]></ToUserName>
+<FromUserName><![CDATA[o2Zz0wlK4GpNElg3oSEajn8xl3lc]]></FromUserName>
+<CreateTime>1503729349</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ycjbook.tunnel.echomod.cn/m/user/index]]></EventKey>
+<MenuId>416886913</MenuId>
+</xml>]

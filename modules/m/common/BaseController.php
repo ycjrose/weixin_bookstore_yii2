@@ -41,6 +41,13 @@ class BaseController extends BaseWebController {
 	public function __construct($id, $module, $config = []){
 	    parent::__construct($id, $module, $config = []);
 	    $this->layout = 'main'; 
+	    //把分享的参数从后端传递到前段
+	    $share_info = [
+	    	'title' => \Yii::$app->params['title'],
+	    	'desc' => \Yii::$app->params['title'],
+	    	'img_url' => \Yii::$app->params['domain'].UrlService::buildWwwUrl('/images/common/qrcode2.jpg'),
+	    ];
+	    \Yii::$app->view->params['share_info'] = json_encode($share_info);
 
 	}
 	//登录统一验证
@@ -53,7 +60,7 @@ class BaseController extends BaseWebController {
 		//如果是微信登录，不授权就跳转到授权页面（此时只是获取openid，并设置cookie）
 		if( !$login_status ){
 			if( \Yii::$app->request->isAjax ){
-				$this->renderJSON(-302,"未登录,系统将引导您重新登录~~");
+				$this->renderJSON(-302,"未登录,系统将引导您重新登录");
 			}else{
 				$redirect_url = UrlService::buildMUrl( "/user/bind" );
 				if( UtilService::isWechat() ){

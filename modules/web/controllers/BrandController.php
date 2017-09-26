@@ -72,7 +72,7 @@ class BrandController extends BaseController{
     public function actionImages(){
     	//品牌相册
         if(\Yii::$app->request->isPost){
-            //上传图片
+            //上传图片 
 
             $image_key = $this->post('image_key');
             if(!$image_key){

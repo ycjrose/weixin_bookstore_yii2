@@ -2,6 +2,7 @@
 namespace app\common\services;
 use app\common\services\BaseService;
 use app\common\services\UtilService;
+use app\models\book\Images;
 /**
 * 上传服务
 */
@@ -41,7 +42,15 @@ class UploadService extends BaseService
 		}else{
 			file_put_contents($upload_dir_path.$upload_full_name, file_get_contents($file_path));
 		}
-
+		if($bucket == 'book'){
+			date_default_timezone_set('PRC');
+			$images = new Images();
+			$images->file_key = $upload_full_name;
+			$images->created_time = date('Y-m-d H:i:s');
+			$images->save(0); 
+		}
+		
+		 
 		return [
 			'code' => 200,
 			'path' => $upload_full_name,

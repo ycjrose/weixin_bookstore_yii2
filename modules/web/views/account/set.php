@@ -26,7 +26,7 @@ StaticService::includeAppJs('/js/web/account/set.js',app\assets\WebAsset::classN
                             <input type="hidden" name="bucket" value="avatar" />
                             <input type="file" name="pic" >
                         </div>
-                        <?php if($user_info['avatar']):?>
+                        <?php if($user_info != ''):?>
 						<span class="pic-each">
 							<img src="<?=UrlService::buildPicUrl('avatar',$user_info['avatar']);?>">
 							<input type="hidden" name="avatar" value="<?=$user_info['avatar'];?>" />

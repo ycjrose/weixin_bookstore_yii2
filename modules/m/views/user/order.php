@@ -1,344 +1,67 @@
+<?php
+use app\common\services\UrlService;
+use app\common\services\UtilService;  
+use app\common\services\ContactService;
+use app\common\services\StaticService;
+StaticService::includeAppJs('/js/m/user/order.js',app\assets\MAsset::className());
+?>
+
 <div style="min-height: 500px;">
 	<div class="page_title clearfix">
-    <span>订单列表</span>
-</div>
-    <div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017040933</h2>
-		<p>下单时间：2017-04-09 14:11 状态：待支付</p>
-				<span class="up_icon"></span>
+    	<span>订单列表</span>
 	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170316/d7330817f6279b882d57157ebeec7816.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>Hadoop权威指南(第3版) </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 78.20</b>
-			</a>
-            		</li>
-			</ul>
+
+<?php if($list):?>
+	<?php foreach($list as $_item):?>
+	<div class="order_box mg-t20">
+		<div class="order_header">
+			<h2>订单编号: <?=$_item['sn'];?></h2>
+			<p>下单时间：<?=$_item['created_time'];?> 状态：<?=ContactService::$pay_status[$_item['status']];?></p>
+			<?php if($_item['status'] == 1):?>
+				<p>快递状态：<?=ContactService::$express_status[$_item['express_status']];?></p>
+				<?php if($_item['express_info']):?>
+					<p>快递信息：<?=$_item['express_info'];?></p>
+				<?php endif;?>
+			<?php endif;?>	
+			<span class="up_icon"></span>
+		</div>
+		<ul class="order_list">
+			<?php foreach($_item['items'] as $_item_info):?>
+        	<li>
+				<a href="<?=UrlService::buildNullUrl();?>">
+					<i class="pic">
+	                    <img src="<?=UrlService::buildPicUrl('book',$_item_info['book_main_image']);?>"  style="width: 100px;height: 100px;"/>
+	                </i>
+					<h2><?=UtilService::encode($_item_info['book_name']);?> </h2>
+					<h3>&nbsp;</h3>
+					<h4>&nbsp;</h4>
+					<b>¥ <?=$_item_info['price'];?></b>
+				</a>
+            </li>
+            <?php endforeach;?>
+		</ul>
+		<!--评论列表-->
+		<?php if($_item['status'] == 1 && $_item['express_status'] == 1 && !$_item['comment_status'] ):?>
+		<a style="display: block;position: absolute;bottom: 1rem;right: 1rem;" class="button"   href="<?=UrlService::buildMUrl('/user/comment_set',[ 'pay_order_id' => $_item['id'] ]);?>">我要评论</a>
+		<?php endif;?>
+		<!--取消订单或支付或确认收货-->
+		<?php if( $_item['status'] == -8 ):?>
 	        <div class="op_box border-top">
-            <a style="display: inline-block;" class="button close" data="33" href="javascript:void(0);">取消订单</a>
-            <a style="display: inline-block;" class="button"  href="/m/pay/buy/?pay_order_id=33">微信支付</a>
-        </div>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031732</h2>
-		<p>下单时间：2017-03-17 14:57 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170316/d7330817f6279b882d57157ebeec7816.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>Hadoop权威指南(第3版) </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 78.20</b>
-			</a>
-            		</li>
-				<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170316/577fcac5eb54a401e3dfa659b6e5fe5f.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>高性能MySQL（第3版） </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 101.10</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031231</h2>
-		<p>下单时间：2017-03-12 19:45 状态：已支付</p>
-				<p>快递状态：已签收</p>
-                        <p>快递信息：顺丰快递 单号 11110000</p>
-                    		<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 135.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031230</h2>
-		<p>下单时间：2017-03-12 19:45 状态：已支付</p>
-				<p>快递状态：等待商家发货</p>
-                    		<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 135.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031229</h2>
-		<p>下单时间：2017-03-12 19:44 状态：待支付</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 90.00</b>
-			</a>
-            		</li>
-			</ul>
+	            <a style="display: inline-block;" class="button close" data="<?=$_item['id'];?>" href="<?=UrlService::buildNullUrl();?>">取消订单</a>
+	            <a style="display: inline-block;" class="button"  href="<?=$_item["pay_url"];?>">微信支付</a>
+	        </div>
+		<?php elseif( $_item['status'] == 1 && $_item['express_status'] == -6):?>
 	        <div class="op_box border-top">
-            <a style="display: inline-block;" class="button close" data="29" href="javascript:void(0);">取消订单</a>
-            <a style="display: inline-block;" class="button"  href="/m/pay/buy/?pay_order_id=29">微信支付</a>
-        </div>
-	</div>
+	            <a style="display: inline-block;" data="<?=$_item['id'];?>"  href="<?=UrlService::buildNullUrl();?>"  class="button confirm_express">确认收货</a>
+	        </div>
+		<?php endif;?>	
 
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031228</h2>
-		<p>下单时间：2017-03-12 15:24 状态：已支付</p>
-				<p>快递状态：已签收</p>
-                        <p>快递信息：顺丰快递 单号 12312312312</p>
-                    		<span class="up_icon"></span>
 	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170301/7a976289c2c1f551a4f21232575ba255.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>浪潮之巅 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 88.88</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017031227</h2>
-		<p>下单时间：2017-03-12 15:17 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170301/7a976289c2c1f551a4f21232575ba255.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>浪潮之巅 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 88.88</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030726</h2>
-		<p>下单时间：2017-03-07 18:16 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 45.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030725</h2>
-		<p>下单时间：2017-03-07 17:41 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 45.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030724</h2>
-		<p>下单时间：2017-03-07 17:41 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 45.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030717</h2>
-		<p>下单时间：2017-03-07 17:35 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 45.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030716</h2>
-		<p>下单时间：2017-03-07 17:34 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170301/7a976289c2c1f551a4f21232575ba255.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>浪潮之巅 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 88.88</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030715</h2>
-		<p>下单时间：2017-03-07 17:26 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170301/7a976289c2c1f551a4f21232575ba255.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>浪潮之巅 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 88.88</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030614</h2>
-		<p>下单时间：2017-03-06 08:39 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>php开发教程 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 45.00</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
-
-<div class="order_box mg-t20">
-	<div class="order_header">
-		<h2>订单编号: 2017030513</h2>
-		<p>下单时间：2017-03-05 20:47 状态：已关闭</p>
-				<span class="up_icon"></span>
-	</div>
-	<ul class="order_list">
-        		<li>
-			<a href="javascript:void(0);">
-				<i class="pic">
-                    <img src="/uploads/book/20170301/7a976289c2c1f551a4f21232575ba255.jpg"  style="width: 100px;height: 100px;"/>
-                </i>
-				<h2>浪潮之巅 </h2>
-				<h3>&nbsp;</h3>
-				<h4>&nbsp;</h4>
-				<b>¥ 88.88</b>
-			</a>
-            		</li>
-			</ul>
-	</div>
+	<?php endforeach;?>
+<?php else:?>
+    <div class="no-data">
+        悲剧啦，连个订单都咩有了~~
+    </div>
+<?php endif;?>
 
 </div>

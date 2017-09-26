@@ -3,10 +3,9 @@
 namespace app\modules\weixin\controllers;
 
 use app\common\components\BaseWebController;
-
 use app\common\services\UrlService;
-
 use app\common\services\weixin\RequestService;
+
  
 /**
 * 微信自定义菜单
@@ -20,15 +19,20 @@ class MenuController extends BaseWebController{
 				[
 					'name' => '商城信息',
 					'type' => 'view',
-					'url' => $button_url['windows'].UrlService::buildMUrl('/default/index'),
+					'url' => $button_url.UrlService::buildMUrl('/default/index'),
 				],
 				[
-					'name' => '我',
+					'name' => '我的信息',
 					'type' => 'view',
-					'url' => $button_url['windows'].UrlService::buildMUrl('/user/index'),
+					'url' => $button_url.UrlService::buildMUrl('/user/index'),
+				],
+				[
+					'name' => '开发者博客',
+					'type' => 'view',
+					'url' => 'http://www.ycjblog.top:8086',
 				],
 			],
-		];
+		]; 
 
 		$config = \Yii::$app->params['weixin'];
 		RequestService::setConfig($config['appid'],$config['token'],$config['sk']);

@@ -53,6 +53,24 @@ class BaseWebController extends Controller{
 		]);
 		
 	}
+	//array转xml
+	public function arrayToXml($arr){
+		$xml = '<xml>';
+		foreach ($arr as $k => $v) {
+			if(is_numeric($v)){
+				$xml .= '<'.$k.'>'.$v.'</'.$k.'>';
+			}else{
+				$xml .= '<'.$k.'><![CDATA['.$v.']]></'.$k.'>';
+			}
+		}
+		$xml .= '</xml>';
+		return $xml;
+	}
+	//xml转array
+	public function xmlToArray($xml){
+		$arr = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)),true);
+		return $arr;
+	}
 
 
 }

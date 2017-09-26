@@ -14,4 +14,26 @@ class ContactService{
 		'0' => '未填写',
 	];
 	public static $default_pwd = '&&&&&&';
+
+	public static $pay_status = [
+		1 => '已支付',
+		-8 => '未支付',
+		0 => '已关闭',
+	];
+
+	public static $express_status = [
+		1 => '已签收',
+		-6 => '已发货待签收',
+		-7 => '已付款待发货',
+		-8 => '未支付',
+		0 => '已关闭',
+	];
+
+	public static $express_status_for_member = [
+		1 => '已签收',
+		-6 => '已发货待签收',
+		-7 => '已付款待发货',
+		-8 => '未支付',
+		0 => '已关闭',
+	];
 }

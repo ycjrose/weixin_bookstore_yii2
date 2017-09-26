@@ -17,7 +17,7 @@ use app\common\services\ContactService;
         </div>
         <div class="row">
             <div class="col-lg-2 text-center">
-                <img class="img-circle" src="/uploads/avatar/20170313/159419a875565b1afddd541fa34c9e65.jpg" width="100px" height="100px"/>
+                <img class="img-circle" src="<?=$member_info['avatar'];?>" width="100px" height="100px"/>
             </div>
             <div class="col-lg-9">
                 <dl class="dl-horizontal">

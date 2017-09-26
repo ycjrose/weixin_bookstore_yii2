@@ -1,0 +1,655 @@
+2017-09-24 21:11:07 [ time:0.079825162887573 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}" 
+result: {"code":40007,"text":"您的请求内容为空。"} 
+errorno: 0 error:  
+2017-09-24 21:11:33 [ time:0.097276926040649 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}" 
+result: {"code":40007,"text":"您的请求内容为空。"} 
+errorno: 0 error:  
+2017-09-24 21:25:23 [ time:0.63681411743164 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}" 
+result: {"code":100000,"text":"好呀，你也好啊"} 
+errorno: 0 error:  
+2017-09-24 21:27:13 [ time:0.20453500747681 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u54c8\u54c8\u54c8\",\"userid\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}" 
+result: {"code":100000,"text":"真不好意思，让你贱笑了。"} 
+errorno: 0 error:  
+2017-09-24 21:28:39 [ time:0.2248170375824 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"仅仅是一个打招呼，我能开心好久好久"} 
+errorno: 0 error:  
+2017-09-24 21:28:49 [ time:0.18545699119568 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u54c8\u54c8\u54c8\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"真对不起，让您贱笑了！"} 
+errorno: 0 error:  
+2017-09-24 21:29:12 [ time:1.2261209487915 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u6545\u610f\u7684\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"冤枉啊，请大人明察。"} 
+errorno: 0 error:  
+2017-09-24 21:29:27 [ time:0.21645712852478 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\uff1f\uff1f\uff1f\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"有进步，会打标点符号了，再过三月，应该能学会打字母。"} 
+errorno: 0 error:  
+2017-09-24 21:30:35 [ time:0.29273509979248 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5217\u8f66\u4fe1\u606f\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"人类历史上最重要的机械交通工具，早期称为蒸汽机车，也叫列车。有独立的轨道行驶。铁路列车按载荷物，可分为运货的货车和载客的客车；亦有两者一起的客货车。众多连续的车辆。一般指火车，尤指由牵引机车和运货或载客的车厢组成的连挂成列的火车。列车定义：列车是指因为一定的目的连挂在一起的一列车辆。区别于车列"} 
+errorno: 0 error:  
+2017-09-24 21:31:47 [ time:0.74919700622559 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\u5417\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"我还不错呦，你应该能看出来吧。"} 
+errorno: 0 error:  
+2017-09-24 21:32:33 [ time:0.26225185394287 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5c0f\u72d7\u7684\u56fe\u7247\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":200000,"text":"亲，已帮你找到图片","url":"http://m.image.so.com/i?q=%E5%B0%8F%E7%8B%97"} 
+errorno: 0 error:  
+2017-09-24 21:33:16 [ time:1.3841960430145 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 21:34:19 [ time:0.33880496025085 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u9c7c\u9999\u8089\u4e1d\u600e\u4e48\u505a\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":200000,"text":"亲，已帮你找到菜谱信息","url":"http://m.xiachufang.com/search?keyword=%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D"} 
+errorno: 0 error:  
+2017-09-24 21:35:56 [ time:0.61405897140503 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":21545}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 21:36:26 [ time:0.62744188308716 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":21545}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 21:36:52 [ time:0.3681800365448 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u9c7c\u9999\u8089\u4e1d\u600e\u4e48\u505a\",\"userid\":21545}" 
+result: {"code":200000,"text":"亲，已帮你找到菜谱信息","url":"http://m.xiachufang.com/search?keyword=%E9%B1%BC%E9%A6%99%E8%82%89%E4%B8%9D"} 
+errorno: 0 error:  
+2017-09-24 21:37:11 [ time:0.20064187049866 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5217\u8f66\u65f6\u523b\u8868\",\"userid\":21545}" 
+result: {"code":100000,"text":"去12306查询就ok"} 
+errorno: 0 error:  
+2017-09-24 21:37:30 [ time:0.29125308990479 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6d77\u53e3\u5230\u5357\u4eac\u7684\u822a\u73ed\",\"userid\":21545}" 
+result: {"code":100000,"text":"这么大了，我还没坐过飞机呢，好想体验一下啊！~"} 
+errorno: 0 error:  
+2017-09-24 21:38:09 [ time:0.61341118812561 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":21545}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 21:44:28 [ time:0.08869194984436 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u662f\u8c01\",\"userid\":21545}" 
+result: {"code":100000,"text":"我是棒棒哒小捷"} 
+errorno: 0 error:  
+2017-09-24 21:47:08 [ time:0.35715794563293 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"w i i\",\"userid\":21545}" 
+result: {"code":100000,"text":"w我"} 
+errorno: 0 error:  
+2017-09-24 21:47:21 [ time:0.50056791305542 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":21545}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 21:53:28 [ time:0.30044293403625 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5317\u4eac\u5230\u4e0a\u6d77\u7684\u98de\u673a\",\"userid\":21545}" 
+result: {"code":100000,"text":"这么大了，我还没坐过飞机呢，好想体验一下啊！~"} 
+errorno: 0 error:  
+2017-09-24 21:58:03 [ time:0.20737290382385 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"同学聚会，有几个人一会露出宝马钥匙，一会掏出奔驰钥匙，一会说自己分分钟几百万上下。结账的时候他们低头掏钱包，掏半天掏不出来。我心里冷冷一笑，掏钱结账然后骑着自行车回家。到家之后掏出他们的钱包一看，嘿，他们还真挺有钱。"} 
+errorno: 0 error:  
+2017-09-24 21:58:25 [ time:0.19693994522095 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"毕加索毕生反对侵略战争，维护世界和平。第二次世界大战期间，德国的将领和士兵经常出入巴黎的毕加索艺术馆，在艺术馆的出口处，毕加索发给每个德国军人一幅他的名画《格尔尼卡》的复制品，这幅画描绘了西班牙城市格尔尼卡遭德军飞机轰炸后的惨状。一位德军盖世太保头目指着这幅画问毕加索：“这是您的杰作吗？”“不，”毕加索面色严峻地说，“这是你们的杰作！”"} 
+errorno: 0 error:  
+2017-09-24 22:00:41 [ time:0.23641300201416 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"孔子被围困在陈国与蔡国之间，整整十天没有饭吃。有时连野菜汤也吃不上，真是饿极了。学生子路偷来了一只煮熟的小猪，孔子不问肉的来路，拿起来就吃；子路又抢了别人的衣服来换了酒，孔子也不问酒的来路，端起来就喝。后来，等到鲁哀公迎接他时，孔子却显出正人君子的风度，席子摆不正不坐，肉类割不正不吃。子路便问:“先生为啥现在与在陈、蔡受困时不一样了呀？”孔子答道:“以前我那样做是为了偷生，今天我这样做是为了讲‘义’呀 ！”"} 
+errorno: 0 error:  
+2017-09-24 22:00:49 [ time:0.30972909927368 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"今天我们几个哥们儿一起吃饭，突然一个哥们放了一个屁，顿时安静了。我机智的说了一句：吃饭还堵不住你的嘴，大家都笑了，这时有一哥们补了一句，你是不是还没刷牙？"} 
+errorno: 0 error:  
+2017-09-24 22:01:42 [ time:0.19218397140503 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"一次，钢琴之王李斯特到克里姆林宫演奏。他开始演奏了，沙皇还在谈着闲话。于是，他停止了演奏。沙皇问他为什么不弹了。他谦卑而骄傲地欠身说：“陛下说话，小子理应缄默。”"} 
+errorno: 0 error:  
+2017-09-24 22:01:52 [ time:0.22491812705994 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"问：当初父母为了阻止你早恋，都用了什么丧尽天良的办法？答：给了我这张脸。。。[拜拜]"} 
+errorno: 0 error:  
+2017-09-24 22:02:10 [ time:0.2861499786377 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"英国首相威尔逊，在一次演讲中，刚进行到一半时，台下突然有个捣蛋分子，高声打断了他：“狗屎！垃圾！”威尔逊虽然受到干扰，但他情急生智，不慌不忙的说：“这位先生，请稍安勿躁，我马上就要讲到你提出的关于环保的问题了。全场不禁为他的机智反应鼓掌喝彩。”"} 
+errorno: 0 error:  
+2017-09-24 22:02:31 [ time:0.20401382446289 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7ed9\u6211\u8bb2\u4e2a\u7b11\u8bdd\",\"userid\":21545}" 
+result: {"code":100000,"text":"老师让孩子们给家长讲题，培养孩子表达能力，于是我让4岁女儿说说她的做题思路～ 她认真的给我讲了一道题后，抬头看我，说了句“剩下的，我就不多说了，这么简单的题，你要自己学会动脑筋...”"} 
+errorno: 0 error:  
+2017-09-24 22:02:46 [ time:0.21042609214783 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"幸好，你终于恢复正常了"} 
+errorno: 0 error:  
+2017-09-24 22:03:30 [ time:0.21581816673279 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"不理你"} 
+errorno: 0 error:  
+2017-09-24 22:03:33 [ time:0.21832585334778 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"不听人家不听"} 
+errorno: 0 error:  
+2017-09-24 22:03:34 [ time:0.24631810188293 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"都说过几遍了，怎么还要问呐"} 
+errorno: 0 error:  
+2017-09-24 22:03:34 [ time:0.20325899124146 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"咦，怎么又是这句话呀"} 
+errorno: 0 error:  
+2017-09-24 22:03:35 [ time:0.20745611190796 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"您，你是不是受什么刺激了？"} 
+errorno: 0 error:  
+2017-09-24 22:03:35 [ time:0.19991612434387 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"好了，不要逗我玩了"} 
+errorno: 0 error:  
+2017-09-24 22:03:36 [ time:0.20738697052002 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"天呐！好讨厌啊！"} 
+errorno: 0 error:  
+2017-09-24 22:03:37 [ time:0.17834401130676 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"我拒绝交谈，哼！"} 
+errorno: 0 error:  
+2017-09-24 22:03:37 [ time:0.19072604179382 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"我回答了多少遍同样的问题啦，玩够了没有？"} 
+errorno: 0 error:  
+2017-09-24 22:03:38 [ time:0.23763203620911 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"天呐！好讨厌啊！"} 
+errorno: 0 error:  
+2017-09-24 22:03:38 [ time:0.16962289810181 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"天呐！好讨厌啊！"} 
+errorno: 0 error:  
+2017-09-24 22:03:39 [ time:0.21010518074036 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"我拒绝交谈，哼！"} 
+errorno: 0 error:  
+2017-09-24 22:03:39 [ time:0.19254612922668 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"现在不想回答任何问题。。"} 
+errorno: 0 error:  
+2017-09-24 22:03:40 [ time:0.20007300376892 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"不要再来烦我啦～！"} 
+errorno: 0 error:  
+2017-09-24 22:03:40 [ time:0.17446184158325 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"天呐！好讨厌啊！"} 
+errorno: 0 error:  
+2017-09-24 22:03:40 [ time:0.39393711090088 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u9ebb\u75f9\",\"userid\":21545}" 
+result: {"code":100000,"text":"我回答了多少遍同样的问题啦，玩够了没有？"} 
+errorno: 0 error:  
+2017-09-24 22:07:18 [ time:0.33282399177551 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5357\u4eac\u5929\u6c14\",\"userid\":21545}" 
+result: {"code":100000,"text":"南京:周日 9月24日,大雨 东风,最低气温20度，最高气温23度"} 
+errorno: 0 error:  
+2017-09-24 22:08:32 [ time:0.24276494979858 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7f8e\u5973\u56fe\u7247\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":200000,"text":"亲，已帮你找到图片","url":"http://m.image.so.com/i?q=%E7%BE%8E%E5%A5%B3"} 
+errorno: 0 error:  
+2017-09-24 22:10:10 [ time:0.25223112106323 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u8bb2\u4e2a\u8111\u7b4b\u6025\u8f6c\u5f2f\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"问：干涉答：步"} 
+errorno: 0 error:  
+2017-09-24 22:10:30 [ time:0.24047183990479 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u8bb2\u4e2a\u8111\u7b4b\u6025\u8f6c\u5f2f\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"问：在不能用手的情况下，怎样才能把桌上的一碗面吃完？答：用筷子."} 
+errorno: 0 error:  
+2017-09-24 22:10:53 [ time:0.55094408988953 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u60f3\u770b\u65b0\u95fb\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":200000,"text":"亲，已帮你找到新闻信息","url":"http://m.toutiao.com/#channel="} 
+errorno: 0 error:  
+2017-09-24 22:11:25 [ time:0.2221200466156 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"access_token":"iYcQvHswgv3lqWBfuZ9kRexG7F0AqJlMwVBtD-wGYs7lBNcSRC_1wn54qevidPyYDcWAA5R8thPJ0LIYD_PWC6Jnbg5VCSIo3n4H4YmL8P0QWUjAAAEKI","expires_in":7200} 
+errorno: 0 error:  
+2017-09-24 22:11:25 [ time:0.0988450050354 ] url: https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=iYcQvHswgv3lqWBfuZ9kRexG7F0AqJlMwVBtD-wGYs7lBNcSRC_1wn54qevidPyYDcWAA5R8thPJ0LIYD_PWC6Jnbg5VCSIo3n4H4YmL8P0QWUjAAAEKI&type=jsapi 
+method: get 
+data: [] 
+result: {"errcode":0,"errmsg":"ok","ticket":"kgt8ON7yVITDhtdwci0qeaBWFHUP2E4qvzhoevwDbuSsWxfYZG7Z-vLTQhW_FlTwio3QPYt3BTxFbsiQUVgkDA","expires_in":7200} 
+errorno: 0 error:  
+2017-09-24 22:21:02 [ time:0.2513439655304 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u7b11\u8bdd\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"楼主母婴店上班，最近店里要搞五一的活动，我负责用手机打电话通知新老顾客活动内容，其中好多次电话响了一声就被挂掉，我以为手机号码被拉黑也就不以为然。 第二天n个客户打电话给老板娘投诉，老板娘扣了我五百块工资…… ……特么脸大碰到挂机键我能怎么办？我也很绝望啊……"} 
+errorno: 0 error:  
+2017-09-24 22:21:15 [ time:0.39778590202332 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6587\u660c\u5929\u6c14\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"文昌:周日 9月24日,大到暴雨 东北风,最低气温27度，最高气温31度"} 
+errorno: 0 error:  
+2017-09-24 23:09:13 [ time:0.094098091125488 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=021rR8py0R4dej1Yb4py0OLToy0rR8pa&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"LM0D49gGte0v6dg7UGhiHQhesh8wrOWiLLIVQ1moqVmjmDIzOmaVzUQkFgyT0QiUb8ipS_YQUzT9SUAdKvmJ1Q","expires_in":7200,"refresh_token":"Y6w38WxpHk3JmpsUjguP7KssF5WADwZ7TEy8olPyv-d9bIe89OTXTzXI6hOrN0RRu-njReqMi-2XbDuxod0DSA","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:09:13 [ time:0.095916032791138 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=0610Z0Vi2uOTYE03YWUi2CUMUi20Z0VF&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"241WnYFtbx9lL9QUAd1ZupmgvXSw6VpBcrrIlt2fC0rt_RjEgTMzGLuw4_cvsJbjH8gLpiNxlqLga4Iqbyxeiw","expires_in":7200,"refresh_token":"_0PcOTCgQujjZ2PP-yiaT1VhEpIohzlsHOr1xFuihI7LvcFoWtFX7p0HWlCYN6wS7sViBrs6-QW7MloQv3IJog","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:11:01 [ time:0.19610810279846 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"你好呀～找我干嘛？"} 
+errorno: 0 error:  
+2017-09-24 23:34:29 [ time:0.10640597343445 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=001idAFj1TYnfy0k1tDj1QcyFj1idAFu&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"ViQGHof5FoZTgkNJFtqvnAYO02TTxxPS2SSMgc0ZsQr8_PfznJAPTUHl-h1nZPrVlCrWR-H7-gC1QQT0v3z0xA","expires_in":7200,"refresh_token":"iufqj49QSJsSp1K9OUJY-L4j-s1VWxoheojpXnntFUW_bPrjQ1tu9RuPpRzhzKhEUXkxGbpfCcQWLzE1KwHBIQ","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:34:29 [ time:0.09803295135498 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=061hS0dL1GQvK316GPaL14EDcL1hS0dr&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"2ISwD1lQbAq0sCIpSJ7jLcw1Ut2OGDGlvTyZGvO90Q5bzjTiItZQnq1fLwOYCLtuRyx92QIRh-6Wu-vB8ngDKw","expires_in":7200,"refresh_token":"9YE5uJJEiT8bsrjehac_4rHItA4K9iQdx3jNAHkeZw94x3I6o-b-UE2mrrdoDGzf4ncX0fy5M4McsigTSIsbcw","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:35:11 [ time:0.098109006881714 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=011qV68r0APsIq1eFO8r0s7f8r0qV68N&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"ooqJKufBKwb0dOcWboOgUYpMGt-GXoaxf3pVClKd5YiNzecReS139z2nDKPQ3DioupNEBfx2VDwiU1TzfrZDqg","expires_in":7200,"refresh_token":"gjNXoXOuAEqqz314sVlbjepkeRs-axQXp1cBhWZ_ShEl2OWK60r2h9wqa2nGQepztZuziXnLIIowXzbtCF-nKw","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_userinfo"} 
+errorno: 0 error:  
+2017-09-24 23:35:11 [ time:0.13691401481628 ] url: https://api.weixin.qq.com/sns/userinfo?access_token=ooqJKufBKwb0dOcWboOgUYpMGt-GXoaxf3pVClKd5YiNzecReS139z2nDKPQ3DioupNEBfx2VDwiU1TzfrZDqg&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTIOeUhleCNwcOkXmww6LtcUaDibLYqic0osicqjTADsVGblGlOPnMOSF7OrK1dmicx7DzPx4lUIK4gvAQ\/0","privilege":[]} 
+errorno: 0 error:  
+2017-09-24 23:36:16 [ time:0.18641901016235 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u54c8\u54c8\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"你抱着别人笑，我抱着自己苦。"} 
+errorno: 0 error:  
+2017-09-24 23:38:19 [ time:0.11168789863586 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=071612UU0tKdsY1ygUSU0Ve8UU0612UI&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"cuelnEhik8FLmZVmTTSTmutV52_ulkrWt2EMqonCtqbvKxpPSFQWDeg8kpTKZiS5NSqzcwmqgyVnK0WIx-OqVQ","expires_in":7200,"refresh_token":"U7dhJe1DJMmCzfPTLrIFsKFuLrgUG2-pc262Lbk1l_AOrD_aYfY5EruhaakZmNmZOt34biDI8ybYGH0_UHQD8g","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:38:19 [ time:0.10659503936768 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=021rhgVM1ChB621nGlXM1Rw7VM1rhgVq&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"AIop-eCyXwuv00d_ZZQEq6qxgouTc2OsSr8XOGfMXCnSbdxDxI8Hi16UyM4U3nYSaVIZxVvA3DyrC1r0z75lYA","expires_in":7200,"refresh_token":"RjSS2poUvcScayxtcKPr0lMmWIhRGRaLdX2hMT29wvCLGvAIT0-ODpyd0uRcC0pjOmtlPoAD-En6k5A011sLrw","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:40:05 [ time:0.10002207756042 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=0113bcJd0wnZqz1nAPKd0mc5Jd03bcJn&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"uvtRy3XRGUkocyWjOW8tHmpvX5KVzP6igxxryXXxrjtzCptvsLni9qiirQ3O3IQugfqUqUgLJ4iiea3ifGfocg","expires_in":7200,"refresh_token":"0Pbuq6go2EodMTqMF15Z6oPRly_Haqmd_Fm1vc7FcFA09tes80AwXsjSZhJrFjyig8d6o9eX63ukIwYwgHD6EA","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_userinfo"} 
+errorno: 0 error:  
+2017-09-24 23:40:05 [ time:0.088820934295654 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=0817ZUJb0WuGSw1pvALb0zb9Kb07ZUJF&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"B0SlNVn5RgkvfRbh3D3IlmW_RVMmZDb5PaL3v6Tqctc5XQ6YxSdH-jEEQ6oZ5kk-Dnt2IUiAfHofTdrEPtcqnA","expires_in":7200,"refresh_token":"Mg5hfngcS-E-R_YdiVHeNM-dTs5oX7I_MUMYGQ_rBgULAP4po85yPs3uc3T8rpArlU4XxJfANfsAuhpsXZxufA","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_userinfo"} 
+errorno: 0 error:  
+2017-09-24 23:40:05 [ time:0.084656953811646 ] url: https://api.weixin.qq.com/sns/userinfo?access_token=uvtRy3XRGUkocyWjOW8tHmpvX5KVzP6igxxryXXxrjtzCptvsLni9qiirQ3O3IQugfqUqUgLJ4iiea3ifGfocg&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"errcode":40001,"errmsg":"invalid credential, access_token is invalid or not latest, hints: [ req_id: m6Ip_0556s160 ]"} 
+errorno: 0 error:  
+2017-09-24 23:40:05 [ time:0.13736796379089 ] url: https://api.weixin.qq.com/sns/userinfo?access_token=B0SlNVn5RgkvfRbh3D3IlmW_RVMmZDb5PaL3v6Tqctc5XQ6YxSdH-jEEQ6oZ5kk-Dnt2IUiAfHofTdrEPtcqnA&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTIOeUhleCNwcOkXmww6LtcUaDibLYqic0osicqjTADsVGblGlOPnMOSF7OrK1dmicx7DzPx4lUIK4gvAQ\/0","privilege":[]} 
+errorno: 0 error:  
+2017-09-24 23:46:45 [ time:0.103355884552 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=07119IcJ1NrgI804wddJ1TgIcJ119Icy&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"mOWTR1lVNNqjUOmyrgZ0TfO4riohjKYU-xKQvgw3oyQerYk1F6dNDCKP5vH5F4Iop2rS4lrPVZcsz_DLWy6vkw","expires_in":7200,"refresh_token":"yYk7QvlYVdU-6K9U_ZUYgVLSLdzxhpgdp47OiPiTvNpjnOhCSGVTQVaTtmyxWCBwkPiyYb978Rn0F3Q55-DFSA","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:49:21 [ time:0.098336935043335 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=071qS49o1oLRxk0ier7o1vIO8o1qS49j&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"gULcTnfgHIdbUH4WzsdiYVNW2nl8WVfb4S7rNpns-rYMkWKWTxMoW1G-hfgeHinG2xYYuJ5VcmKhLiICkBThvQ","expires_in":7200,"refresh_token":"Klb1KvqfbWWTjQIzeVlLru7TrVNWrwc-gBDXHVGVf2fCUgvKAOkufzByNzkZJUFCPB0vzTTfzhIASU6YvVSYsg","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:49:22 [ time:0.10120892524719 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=071qVp8T1uxSr91pcR8T1zev8T1qVp88&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"Sr2vsgENP9b4NIgsSsccutZ4n_veG0XTmCe7HmywyMT-L4pAfiThxcc3tkau0PSgAJ8vvq7--SfJfiPFmOoTlw","expires_in":7200,"refresh_token":"q-oveHj0WWcLeqom-v-nlQ_A5O-vmqXLXChq9COTTs0U7drX50MASvDydACde3Ovq4jyg6-n_TKFvTiubRcLtw","openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-24 23:51:53 [ time:0.19229793548584 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u63d0\u63d0\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"你说的也不无道理啊。"} 
+errorno: 0 error:  
+2017-09-24 23:52:11 [ time:0.31413102149963 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u54c8\u54c8\u54c8\u54c8\u54c8\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"真不好意思，让你贱笑了。"} 
+errorno: 0 error:  
+2017-09-24 23:52:21 [ time:0.30240201950073 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u8001\u5a46\u662f\u8c01\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"看你这么好奇，我就告诉你我单身吧。"} 
+errorno: 0 error:  
+2017-09-25 14:38:23 [ time:0.16856908798218 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"access_token":"91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK","expires_in":7200} 
+errorno: 0 error:  
+2017-09-25 14:38:24 [ time:0.65049195289612 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/\"},{\"name\":\"\u6211\u7684\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/index\"},{\"name\":\"\u5f00\u53d1\u8005\u535a\u5ba2\",\"type\":\"view\",\"url\":\"http:\\\/\\\/www.ycjblog.top:8086\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-09-25 14:38:27 [ time:0.68813180923462 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/\"},{\"name\":\"\u6211\u7684\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/index\"},{\"name\":\"\u5f00\u53d1\u8005\u535a\u5ba2\",\"type\":\"view\",\"url\":\"http:\\\/\\\/www.ycjblog.top:8086\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-09-25 15:23:44 [ time:0.66369700431824 ] url: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"button\":[{\"name\":\"\u5546\u57ce\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/\"},{\"name\":\"\u6211\u7684\u4fe1\u606f\",\"type\":\"view\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/index\"},{\"name\":\"\u5f00\u53d1\u8005\u535a\u5ba2\",\"type\":\"view\",\"url\":\"http:\\\/\\\/www.ycjblog.top:8086\"}]}" 
+result: {"errcode":0,"errmsg":"ok"} 
+errorno: 0 error:  
+2017-09-25 15:47:23 [ time:0.12342500686646 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506265795,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 15:47:23 [ time:0.16367197036743 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"3500.00\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u9e1f\u54e5\u79c1\u623f\u83dc*70\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417509234} 
+errorno: 0 error:  
+2017-09-25 15:48:08 [ time:0.31884598731995 ] url: https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&type=jsapi 
+method: get 
+data: [] 
+result: {"errcode":0,"errmsg":"ok","ticket":"kgt8ON7yVITDhtdwci0qeaBWFHUP2E4qvzhoevwDbuTbIxqo33UVzuHtPKADKcfiEOsgLNwwl_w-7cGMsDj4Vw","expires_in":7200} 
+errorno: 0 error:  
+2017-09-25 15:51:20 [ time:0.11141204833984 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":0,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 15:51:20 [ time:0.1082968711853 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":false,\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"2.60\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u82f1\u8bed6\u7ea7*4\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":40003,"errmsg":"invalid openid hint: [9416_0879ge25]"} 
+errorno: 0 error:  
+2017-09-25 15:55:06 [ time:0.098700046539307 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":0,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 15:55:51 [ time:0.12512803077698 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506326132,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 15:55:52 [ time:0.16599202156067 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"2.60\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u82f1\u8bed6\u7ea7*4\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417509531} 
+errorno: 0 error:  
+2017-09-25 15:57:16 [ time:0.17176198959351 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"好吧，你也好。"} 
+errorno: 0 error:  
+2017-09-25 16:13:59 [ time:0.166179895401 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506326132,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 16:13:59 [ time:0.17792201042175 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"6.90\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u786c\u4ef6\u539f\u7406*3\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417510248} 
+errorno: 0 error:  
+2017-09-25 16:20:59 [ time:0.18002700805664 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506326132,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 16:20:59 [ time:0.16505289077759 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"1.02\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u7f16\u7a0b\u4e4b\u7f8e*1\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417510494} 
+errorno: 0 error:  
+2017-09-25 16:23:53 [ time:0.14706516265869 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506326132,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 16:23:53 [ time:0.14369583129883 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"0.66\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u4e92\u8054\u7f51\u601d\u7ef4\u4fee\u70bc*3\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417510603} 
+errorno: 0 error:  
+2017-09-25 16:29:02 [ time:0.133868932724 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK&openid=o2Zz0wplpew1Q5HSSTZhLSECnmAU&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0wplpew1Q5HSSTZhLSECnmAU","nickname":"云昌捷","sex":1,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ictqRprWzRRQy9XC6G4HkVQ9VbKUAqQ6vPxqBLAicLcRHtRYu3h5HDvRX40ZApONmQTApSEnduZQ6OzvmK6ZftfX2Iyg5GeVicz\/0","subscribe_time":1506326132,"remark":"","groupid":0,"tagid_list":[]} 
+errorno: 0 error:  
+2017-09-25 16:29:02 [ time:0.182452917099 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=91SPOElAvruzN8GPjuFQcEYocsmER4shknwu__BoAI1bWnR-_0LtCwxSc7phyys5dsrdA-9ne5pXax-jxm-uYCPhhmcdus1wV3DFXbpdyr8x2wRGI_1h0oWcN8LU7ZpqOPBhAFAXYK 
+method: post 
+data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"50.00\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u9e1f\u54e5\u79c1\u623f\u83dc*1\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417510768} 
+errorno: 0 error:  
+2017-09-25 16:35:51 [ time:0.30370497703552 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u660e\u5e74\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"明年还早着呢"} 
+errorno: 0 error:  
+2017-09-25 17:00:47 [ time:0.21784400939941 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u597d\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"你陪我玩我就好啦"} 
+errorno: 0 error:  
+2017-09-25 17:00:56 [ time:0.24845695495605 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u5f88\u7231\u4f60\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"这才对嘛"} 
+errorno: 0 error:  
+2017-09-25 17:01:06 [ time:0.32311010360718 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4f60\u4e0d\u7231\u6211\u4e86\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"会有猪头替我爱你"} 
+errorno: 0 error:  
+2017-09-25 17:01:35 [ time:0.33952903747559 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u4e0d\u7231\u732a\u5934\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"我问你的话你会开心嘛"} 
+errorno: 0 error:  
+2017-09-25 17:01:57 [ time:0.20624208450317 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u6211\u542c\u4e0d\u61c2\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"你不懂没关系，因为我也不知道自己在说啥。"} 
+errorno: 0 error:  
+2017-09-25 17:02:48 [ time:0.096774816513062 ] url: https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b&code=0814Yr101QhFu22SjE201t6G1014Yr1n&grant_type=authorization_code 
+method: get 
+data: [] 
+result: {"access_token":"2gYsoyleg0cRmbP5xcWikGsOavciJqVlv7kKGHzx7rSB2_yNVtDJXdN3Epp7RUq5AhdyicpP7dBp1aViaL4Dhw","expires_in":7200,"refresh_token":"EKmG9l-HKnVmdV_kdY-RT7rIfTqHgLjBYOFI5UF4sMn3ucdSSitGZ5zuJthmw_4QfzZAkFEizO1OFBrLOnjQcA","openid":"o2Zz0woDi5qEoMWumYkAIKTgvpl0","scope":"snsapi_base"} 
+errorno: 0 error:  
+2017-09-25 17:03:35 [ time:0.19384002685547 ] url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc1d2aa71e4cd80dd&secret=d380974aa0bde259c9c8af972ff9988b 
+method: get 
+data: [] 
+result: {"access_token":"wDoUvYGoYlsGhcRCaQqt2WDG_MJdjNzQhuG_XbBMFO7LrmeXhtXjBHnyq7vC5neDlqKKRBThP34A0fv36cgBENWoz5xxZ0IKOZEvQrLjGGTTtRTQOt4EGp2LY4Iwr6CKTAIaAEAIPX","expires_in":7200} 
+errorno: 0 error:  
+2017-09-25 17:03:35 [ time:0.18274211883545 ] url: https://api.weixin.qq.com/cgi-bin/user/info?access_token=wDoUvYGoYlsGhcRCaQqt2WDG_MJdjNzQhuG_XbBMFO7LrmeXhtXjBHnyq7vC5neDlqKKRBThP34A0fv36cgBENWoz5xxZ0IKOZEvQrLjGGTTtRTQOt4EGp2LY4Iwr6CKTAIaAEAIPX&openid=o2Zz0woDi5qEoMWumYkAIKTgvpl0&lang=zh_CN 
+method: get 
+data: [] 
+result: {"subscribe":1,"openid":"o2Zz0woDi5qEoMWumYkAIKTgvpl0","nickname":"五柳先生与神学论","sex":2,"language":"zh_CN","city":"文昌","province":"海南","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/LtfY7Hpic5R0ibiaFKEI5BqoicUpf5vIG7JR2zicP3M8IBaKQbfnGZB9bAZ9mNI9AgQ7jAicibIm39kHmXsr2PA3Ghdh8XHuDTjHjkO\/0","subscribe_time":1503056237,"remark":"我的爱人","groupid":2,"tagid_list":[2]} 
+errorno: 0 error:  
+2017-09-25 17:03:35 [ time:0.36492085456848 ] url: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=wDoUvYGoYlsGhcRCaQqt2WDG_MJdjNzQhuG_XbBMFO7LrmeXhtXjBHnyq7vC5neDlqKKRBThP34A0fv36cgBENWoz5xxZ0IKOZEvQrLjGGTTtRTQOt4EGp2LY4Iwr6CKTAIaAEAIPX 
+method: post 
+data: "{\"touser\":\"o2Zz0woDi5qEoMWumYkAIKTgvpl0\",\"template_id\":\"8JhBgybnlkUvEXTqp4aBgdiSTcKNN7nk0S6TshbI4Wc\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\\\/order\",\"data\":{\"first\":{\"value\":\"\u6211\u4eec\u5df2\u6536\u5230\u60a8\u7684\u8d27\u6b3e\uff0c\u5f00\u59cb\u4e3a\u60a8\u6253\u5305\u5546\u54c1\uff0c\u8bf7\u8010\u5fc3\u7b49\u5f85: )\",\"color\":\"#173177\"},\"orderMoneySum\":{\"value\":\"0.65\",\"color\":\"#fb0909\"},\"orderProductName\":{\"value\":\"\u82f1\u8bed6\u7ea7*1\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
+result: {"errcode":0,"errmsg":"ok","msgid":417512142} 
+errorno: 0 error:  
+2017-09-25 17:28:50 [ time:0.3050320148468 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5357\u4eac\u5929\u6c14\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"南京:周一 9月25日,大到暴雨 东南风,最低气温22度，最高气温25度"} 
+errorno: 0 error:  
+2017-09-25 17:29:17 [ time:0.39672899246216 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5357\u4eac\u4e00\u5468\u5929\u6c14\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"南京:周一 9月25日,大到暴雨 东南风,最低气温22度，最高气温25度"} 
+errorno: 0 error:  
+2017-09-25 17:30:08 [ time:0.73958802223206 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5357\u4eac\u516c\u4ea4\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"哦哦，我知道了，我们聊点别的吧"} 
+errorno: 0 error:  
+2017-09-25 17:30:22 [ time:0.60550284385681 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u5357\u4eac\u90ae\u7535\u5927\u5b66\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"南京邮电大学坐落于六朝古都——江苏省南京市，是原由工业与信息化部直属、现工信部与江苏省政府共建的以信息科技为特色、工学门类为主体、工管文理协调发展的多科性全国重点大学。首批入选国家“2011计划（14个协同创新中心）”建设，同时也是进入教育部“卓越工程师教育培养计划”建设的名牌高校"} 
+errorno: 0 error:  
+2017-09-25 18:20:29 [ time:0.10095810890198 ] url: https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=wDoUvYGoYlsGhcRCaQqt2WDG_MJdjNzQhuG_XbBMFO7LrmeXhtXjBHnyq7vC5neDlqKKRBThP34A0fv36cgBENWoz5xxZ0IKOZEvQrLjGGTTtRTQOt4EGp2LY4Iwr6CKTAIaAEAIPX&type=jsapi 
+method: get 
+data: [] 
+result: {"errcode":0,"errmsg":"ok","ticket":"kgt8ON7yVITDhtdwci0qeaBWFHUP2E4qvzhoevwDbuQHIn6fLMLoKjoKU8qv4O2WqBjaXF0QP7KsMBWAA3-lXg","expires_in":7200} 
+errorno: 0 error:  
+2017-09-26 01:13:08 [ time:0.10171294212341 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A13%3A08&v=2&sign=6562666163396434303366343862656564343764313034626439656562396163 
+method: get 
+data: [] 
+result: {"error_response":{"code":33,"msg":"Invalid version","sub_msg":"Http传入的参数中必需包含version参数，或者传入的版本不合法","request_id":"1475xrhwveps7"}} 
+errorno: 0 error:  
+2017-09-26 01:15:46 [ time:0.076249122619629 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A15%3A46&v=2.0&sign=6236323661363033643738643562323731376536636434653366633262646239 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"rxmy8jh80rom"}} 
+errorno: 0 error:  
+2017-09-26 01:15:53 [ time:0.051558017730713 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A15%3A53&v=2.0&sign=6463633761373130316434386334303330653838316636313961346462613565 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"12kbdh0twzr0b"}} 
+errorno: 0 error:  
+2017-09-26 01:18:09 [ time:0.085628032684326 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A18%3A09&v=2.0&sign=3636343333366233623037346166373666346632616238633865623961633066 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"epvi7q6xyaz5"}} 
+errorno: 0 error:  
+2017-09-26 01:18:12 [ time:0.050880193710327 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A18%3A12&v=2.0&sign=3532663965386564363561666132643532303065383334656134666262386565 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"2elakx25vqxr"}} 
+errorno: 0 error:  
+2017-09-26 01:23:40 [ time:0.054396867752075 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A39&v=2.0&sign=6338383136306464363536346463646261396536353733343362343437633635 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"11ifse60e7ba2"}} 
+errorno: 0 error:  
+2017-09-26 01:23:42 [ time:0.051723003387451 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A42&v=2.0&sign=3163316564383434616230636164386664346236646130336336393633326666 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"ubp2lh7e8dp7"}} 
+errorno: 0 error:  
+2017-09-26 01:23:42 [ time:0.052908897399902 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A42&v=2.0&sign=3163316564383434616230636164386664346236646130336336393633326666 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"eoqz0fhs2t1z"}} 
+errorno: 0 error:  
+2017-09-26 01:23:43 [ time:0.052227973937988 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A43&v=2.0&sign=3836656435616238613737363164323534346136643261623835383537346162 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"iv00n0zd6swo"}} 
+errorno: 0 error:  
+2017-09-26 01:23:44 [ time:0.053385019302368 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A44&v=2.0&sign=6461633733373635666237666337303766653431613961663561366636343437 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"11ifymnr25r2h"}} 
+errorno: 0 error:  
+2017-09-26 01:23:55 [ time:0.063513040542603 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A23%3A55&v=2.0&sign=6631663763303637623461383431666164386335626465386634616534323263 
+method: get 
+data: [] 
+result: {"error_response":{"code":25,"msg":"Invalid signature","request_id":"2frzqdt6zi11"}} 
+errorno: 0 error:  
+2017-09-26 01:28:45 [ time:0.060720920562744 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A28%3A45&v=2.0&sign=6F8D373748330F79FDDC04A833011BD1 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"utxqsfxzug7"}} 
+errorno: 0 error:  
+2017-09-26 01:29:03 [ time:0.2147958278656 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A29%3A03&v=2.0&sign=F15FD551CF386F9321F976736E7247D4 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"3dpa0gnjf5ja"}} 
+errorno: 0 error:  
+2017-09-26 01:29:05 [ time:0.05531907081604 ] url: https://eco.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A29%3A05&v=2.0&sign=5166BC6C94DEA55F7E42E97497F41628 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"3ac3zsfn5g2t"}} 
+errorno: 0 error:  
+2017-09-26 01:33:49 [ time:0.037332057952881 ] url: http://gw.api.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A33%3A49&v=2.0&sign=F5220D43B00295D80B67C328D367169F 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"eyemhdcjnqa0"}} 
+errorno: 0 error:  
+2017-09-26 01:33:52 [ time:0.029156923294067 ] url: http://gw.api.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A33%3A52&v=2.0&sign=2A7B7C80F359F4198458CB68927FAF4A 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"rxw1mf9qzxi5"}} 
+errorno: 0 error:  
+2017-09-26 01:33:52 [ time:0.060019016265869 ] url: http://gw.api.taobao.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A33%3A52&v=2.0&sign=2A7B7C80F359F4198458CB68927FAF4A 
+method: get 
+data: [] 
+result: {"error_response":{"code":11,"msg":"Insufficient isv permissions","sub_code":"isv.permission-api-package-limit","sub_msg":"scope ids is 11022 11600 11863","request_id":"utl9t3yy4v7"}} 
+errorno: 0 error:  
+2017-09-26 01:34:11 [ time:0.099077939987183 ] url: http://gw.api.tbsandbox.com/router/rest?app_key=LTAIyadv595ZFdBj&format=json&method=alibaba.aliqin.fc.sms.num.send&rec_num=13255287051&sign_method=md5&sms_free_sign_name=ycj%E4%B8%AA%E4%BA%BA087&sms_param=%7Bcode%3A4314%7D&sms_template_code=SMS_100015017&sms_type=normal&timestamp=2017-09-26+01%3A34%3A11&v=2.0&sign=E5BD04A037ADAA37180C1C2173E27792 
+method: get 
+data: [] 
+result: {"error_response":{"code":29,"msg":"Invalid app Key","sub_code":"isv.appkey-not-exists","request_id":"15a02wof09c4u"}} 
+errorno: 0 error:  
