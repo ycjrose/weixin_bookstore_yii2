@@ -25,7 +25,8 @@ class MonthCountController extends BaseController{
 		if(!$book_info){
 			return false;
 		}
-		$sale_list = BookSaleChangeLog::find()->where( ['book_id' => $book_info['id'] ] )->asArray()->all();
+		$sale_list = BookSaleChangeLog::find()->where(['>=','created_time',date('Y-m-d H:i:s',time() - 60*60*24*30 ) ])->andWhere( ['book_id' => $book_info['id'] ] )->asArray()->all();
+
 		$sum = 0;
 		foreach ($sale_list as $value) {
 			$sum += $value['quantity'];
