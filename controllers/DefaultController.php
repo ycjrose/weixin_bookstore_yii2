@@ -72,6 +72,5 @@ class DefaultController extends BaseWebController{
 		echo $qrCode->writeString();
 		exit;
 	}
-	
 
 }

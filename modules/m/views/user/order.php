@@ -59,7 +59,7 @@ StaticService::includeAppJs('/js/m/user/order.js',app\assets\MAsset::className()
 	        </div>
 		<?php endif;?>	
 
-	</div>
+	</div> 
 	<?php endforeach;?>
 <?php else:?>
     <div class="no-data">
