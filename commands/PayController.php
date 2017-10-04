@@ -4,10 +4,12 @@ use app\commands\BaseController;
 use app\models\pay\PayOrder;
 use app\common\services\PayOrderService;
 
+/**
+* 库存处理，释放30分钟往前的订单
+*/
+
 class PayController extends BaseController{
-	/**
-	* 库存处理，释放30分钟往前的订单
-	*/
+	
 	public function actionReset_stock(){
 		$before_date = date('Y-m-d H:i:s',time() - 30 * 60);
 		$before_orders = PayOrder::find()->where(['status' => -8])->andWhere(['<=','created_time',$before_date])->asArray()->all();

@@ -1,5 +1,5 @@
 $('.do_order').click(function(){
-	var address_id = 0;
+	var address_id = $('input[name=address_id]:checked').val();
 	var data = [];
 	$('.order_list li').each(function(i){
 		var tmp_book_id = $(this).attr("data");
@@ -16,6 +16,7 @@ $('.do_order').click(function(){
 	var postData = {
 		'product_item':data,
 		'address_id':address_id,
+		'sc':$('.op_box input[name=sc]').val(),
 	};
 
 	$.post(url,postData,function(result){

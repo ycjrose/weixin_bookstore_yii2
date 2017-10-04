@@ -44,6 +44,9 @@ $config = [
         
     ],
     'params' => $params,
+    'aliases' => [
+        '@Aliyun' => '@app/vendor/api_sdk/lib',
+    ],
     'modules' => [
             'web' => [
                 'class' => 'app\modules\web\WebModule',

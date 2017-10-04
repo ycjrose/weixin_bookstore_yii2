@@ -1,5 +1,5 @@
 <?php
-/** 验证码类* */
+/** 图形验证码类* */
 
 namespace app\common\services\captcha;
 

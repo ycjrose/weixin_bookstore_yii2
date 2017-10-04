@@ -36,4 +36,6 @@ class ContactService{
 		-8 => '未支付',
 		0 => '已关闭',
 	];
+
+	public static $default_comment = '系统默认评论';
 }

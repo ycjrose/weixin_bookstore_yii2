@@ -14,19 +14,15 @@ StaticService::includeAppJs( "/js/m/product/order.js",\app\assets\MAsset::classN
     </div>
 
     <ul class="address_list">
-		                        <li style="padding: 5px 5px;">
-                <label>
-                    <input style="display: inline;" type="radio" name="address_id" value="2"  checked   >
-                    浙江省宁波市海曙区太阳出来了爬山平（郭威收）13774355081                </label>
-
-            </li>
-                        <li style="padding: 5px 5px;">
-                <label>
-                    <input style="display: inline;" type="radio" name="address_id" value="1"   >
-                    天津市河东区狗不理包子100号（郭威收）13774355074                </label>
-
-            </li>
-            		    </ul>
+		<?php foreach($address_info as $_item):?>                     
+        <li style="padding: 5px 5px;">
+            <label>
+                <input style="display: inline;" type="radio" name="address_id" value="<?=$_item['id'];?>"  <?php if($_item['is_default']):?>checked<?php endif;?> >
+                    <?=UtilService::encode($_item['really_address']);?>                
+            </label>
+        </li>
+        <?php endforeach;?>
+    </ul>
 
 
 	<div class="order_header">
@@ -51,7 +47,7 @@ StaticService::includeAppJs( "/js/m/product/order.js",\app\assets\MAsset::classN
 	</div>
 </div>
 <div class="op_box">
-    <input type="hidden" name="sc" value="product">
+    <input type="hidden" name="sc" value="<?=$sc;?>">
 	<input style="width: 100%;" type="button" value="确定下单" class="red_btn do_order"  />
 </div>
 </div>

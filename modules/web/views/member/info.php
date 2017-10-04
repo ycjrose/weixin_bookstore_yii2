@@ -1,6 +1,6 @@
 <?php
 use app\common\services\UrlService; 
-use app\common\services\UtilService;
+use app\common\services\UtilService; 
 use app\common\services\ContactService;
 ?>
 <?=\Yii::$app->view->renderFile('@app/modules/web/views/member/tab_common_member.php',['current' => '']);?>
@@ -52,51 +52,19 @@ use app\common\services\ContactService;
                                         <th>订单编号</th>
                                         <th>支付时间</th>
                                         <th>支付金额</th>
-                                        <th>订单状态</th>
+                                        <th>快递状态</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                                                                                                    <tr>
-                                            <td>
-                                               20170312194531                                            </td>
-                                            <td>
-                                                                                                2017-03-12 22:28                                                                                            </td>
-                                            <td>
-                                                135.00                                            </td>
-                                            <td>
-												已支付                                            </td>
+                                        <?php foreach($orders as $_item):?>
+                                        <tr>
+                                            <td><?=$_item['order_sn'];?></td>
+                                            <td><?=$_item['updated_time'];?></td>
+                                            <td><?=$_item['pay_price'];?></td>
+                                            <td><?=ContactService::$express_status[$_item['express_status']];?></td>
                                         </tr>
-                                                                                <tr>
-                                            <td>
-                                               20170312194530                                            </td>
-                                            <td>
-                                                                                                2017-03-12 22:28                                                                                            </td>
-                                            <td>
-                                                135.00                                            </td>
-                                            <td>
-												已支付                                            </td>
-                                        </tr>
-                                                                                <tr>
-                                            <td>
-                                               20170312194429                                            </td>
-                                            <td>
-                                                                                            </td>
-                                            <td>
-                                                90.00                                            </td>
-                                            <td>
-												待支付                                            </td>
-                                        </tr>
-                                                                                <tr>
-                                            <td>
-                                               20170312152428                                            </td>
-                                            <td>
-                                                                                                2017-03-12 15:51                                                                                            </td>
-                                            <td>
-                                                88.88                                            </td>
-                                            <td>
-												已支付                                            </td>
-                                        </tr>
-                                                                                                                </tbody>
+                                        <?php endforeach;?>
+                                    </tbody>
                                 </table>
                             </div>
                             <div class="tab-pane" id="tab-2">
@@ -109,32 +77,13 @@ use app\common\services\ContactService;
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                                                                                                            <td>
-                                            2017-03-17 16:48:31                                        </td>
-                                                <td>
-													8                                                </td>
-                                        <td>
-											哈哈哈哈或哈哈或                                        </td>
-                                                                                        <td>
-                                            2017-03-17 16:41:11                                        </td>
-                                                <td>
-													6                                                </td>
-                                        <td>
-											书是正品的，非常不错的                                        </td>
-                                                                                        <td>
-                                            2017-03-17 16:41:16                                        </td>
-                                                <td>
-													8                                                </td>
-                                        <td>
-											书是正品的，非常不错的                                        </td>
-                                                                                        <td>
-                                            2017-03-17 16:41:17                                        </td>
-                                                <td>
-													10                                                </td>
-                                        <td>
-											服务非常好                                        </td>
-                                                                                                                            </tr>
+                                        <?php foreach($comments as $_item):?>
+                                        <tr>
+                                            <td><?=$_item['created_time'];?></td>
+                                            <td><?=$_item['score'];?></td>
+                                            <td><?=$_item['content'];?></td>
+                                        </tr>
+                                        <?php endforeach;?>
                                     </tbody>
                                 </table>
                             </div>

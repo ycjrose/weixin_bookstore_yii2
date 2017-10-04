@@ -18,7 +18,9 @@
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "gmars/yii2-sms": "dev-master"
+        "gmars/yii2-sms": "dev-master",
+        "2amigos/qrcode-library": "~1.1"
+        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -55,6 +57,12 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
+        }
+    },
+    "repositories" : {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
         }
     }
 }

@@ -25,7 +25,7 @@ StaticService::includeAppJs('/js/m/user/order.js',app\assets\MAsset::className()
 			<?php endif;?>	
 			<span class="up_icon"></span>
 		</div>
-		<ul class="order_list">
+		<ul class="order_list" style="position: relative;">
 			<?php foreach($_item['items'] as $_item_info):?>
         	<li>
 				<a href="<?=UrlService::buildNullUrl();?>">
@@ -37,13 +37,16 @@ StaticService::includeAppJs('/js/m/user/order.js',app\assets\MAsset::className()
 					<h4>&nbsp;</h4>
 					<b>¥ <?=$_item_info['price'];?></b>
 				</a>
+				<!--评论列表-->
+				<?php if($_item['status'] == 1 && $_item['express_status'] == 1 && !$_item_info['comment_status'] ):?>
+				<a style="display: block;position: absolute;bottom: 1rem;right: 1rem;" class="button"   href="<?=UrlService::buildMUrl('/user/comment_set',[ 'pay_order_id' => $_item['id'] , 'book_id' => $_item_info['book_id'] ]);?>">我要评论</a>
+				<?php endif;?>
             </li>
+            
             <?php endforeach;?>
+            
 		</ul>
-		<!--评论列表-->
-		<?php if($_item['status'] == 1 && $_item['express_status'] == 1 && !$_item['comment_status'] ):?>
-		<a style="display: block;position: absolute;bottom: 1rem;right: 1rem;" class="button"   href="<?=UrlService::buildMUrl('/user/comment_set',[ 'pay_order_id' => $_item['id'] ]);?>">我要评论</a>
-		<?php endif;?>
+		
 		<!--取消订单或支付或确认收货-->
 		<?php if( $_item['status'] == -8 ):?>
 	        <div class="op_box border-top">

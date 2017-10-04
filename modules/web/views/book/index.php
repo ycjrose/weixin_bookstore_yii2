@@ -80,7 +80,7 @@ use app\common\services\ContactService;
                             <?php else:?>
                                 <a class="m-l button-ops" attr-action="recover" attr-message="是否恢复？" href="<?=UrlService::buildNullUrl();?>" data="<?=$_item['id'];?>">
                                         <i class="fa fa-rotate-left fa-lg"></i>
-                                 </a>
+                                </a>
                             <?php endif;?>
                         </td>
                     </tr>

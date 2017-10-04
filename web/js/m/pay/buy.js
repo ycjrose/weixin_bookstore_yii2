@@ -1,7 +1,14 @@
 $('.do_pay').click(function(){
+	var btn_target = $(this);
+	if( btn_target.hasClass("disabled") ){
+	    alert("正在处理!!请不要重复提交");
+	    return;
+	}
+	btn_target.addClass("disabled");
 	var url = common_ops.buildMUrl('/pay/prepare2');
 	var data = {'order_id':$('.hide_wrap input[name="order_id"]').val()};
 	$.post(url,data,function(result){
+		btn_target.removeClass("disabled");
 		if(result.code === -1){
 			alert(result.msg);
 		}
@@ -27,7 +34,7 @@ $('.do_pay').click(function(){
 			// 	}
 			// };
 			// wx_pay(json_obj);
-			alert('支付成功!');
+			alert(result.msg);
 			window.location.href = common_ops.buildMUrl('/user/order');
 		}
 	},'JSON');

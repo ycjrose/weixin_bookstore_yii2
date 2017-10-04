@@ -3,11 +3,11 @@
 namespace app\modules\web\controllers;
  
 use app\modules\web\common\BaseController;
-
 use app\models\member\Member;
-
+use app\models\book\Book;
+use app\models\member\MemberComments;
+use app\models\pay\PayOrder;
 use app\common\services\ContactService;
- 
 use app\common\services\UrlService;
 
 class MemberController extends BaseController{
@@ -32,11 +32,11 @@ class MemberController extends BaseController{
 
         //分页操作
         $page_size = 10;//每页多少条记录
-        $page_count = $query->count();
+        $page_count = $query->count();//总条数
         $page_total = ceil($page_count / $page_size);
 
         $members = $query->offset(($p - 1) * $page_size)
-        ->limit($page_size)->orderBy(['id' => SORT_DESC])->asArray()->all(); 
+        ->limit($page_size)->orderBy(['status' => SORT_DESC,'id' => SORT_ASC])->asArray()->all(); 
         return $this->render('index',[
             'members' => $members,
             'status' => ContactService::$status,
@@ -59,7 +59,13 @@ class MemberController extends BaseController{
             return $this->redirect(UrlService::buildWebUrl('/member'));
         }
         $member_info = Member::find()->where(['id' => $id])->asArray()->one();
-        return $this->render('info',['member_info' => $member_info]);
+        $orders = PayOrder::find()->where(['member_id' => $id,'status' => 1])->orderBy(['id' => SORT_DESC])->limit(10)->asArray()->all();
+        $comments = MemberComments::find()->where(['member_id' => $id])->orderBy(['id' => SORT_DESC])->limit(10)->asArray()->all();
+        return $this->render('info',[
+            'member_info' => $member_info,
+            'orders' => $orders,
+            'comments' => $comments,
+        ]);
     }
     public function actionSet(){
     	//会员信息的编辑或添加
@@ -140,6 +146,31 @@ class MemberController extends BaseController{
     }
     public function actionComment(){
         //会员的评论列表
-        return $this->render('comment');
+        $p = intval($this->get('p',1));
+        $query = MemberComments::find();
+        //分页操作
+        $page_size = 10;//每页多少条
+        $page_count = $query->count();
+        $page_total = ceil($page_count / $page_size);
+        //查询
+        $comments = $query->orderBy(['id' => SORT_DESC])->offset( ($p - 1) * $page_size)->limit($page_size)->asArray()->all();
+        $members = Member::find()->where(['id' => array_column($comments, 'member_id')])->indexBy('id')->asArray()->all();
+        $books = Book::find()->where(['id' => array_column($comments, 'book_id')])->indexBy('id')->asArray()->all();
+        foreach ($comments as $k => $v) {
+            $comments[$k]['book_name'] = $books[ $v['book_id'] ]['name'];
+            $comments[$k]['member_name'] = $members[ $v['member_id'] ]['nickname'];
+            $comments[$k]['mobile'] = $members[ $v['member_id'] ]['mobile'];
+            $comments[$k]['avatar'] = $members[ $v['member_id'] ]['avatar'];
+        }
+
+        return $this->render('comment',[
+            'comments' => $comments,
+            'pages' => [
+                'page_size' => $page_size,
+                'page_count' => $page_count,
+                'page_total' => $page_total,
+                'p' => $p
+            ],
+        ]);
     }
 }

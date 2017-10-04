@@ -154,7 +154,8 @@ class PayController extends BaseController{
         if(!$order_info){
             return $this->sendRes('该订单不存在',false);
         }
-        if($order_info['pay_price'] * 100 != $wx_res['total_fee']){
+        
+        if(intval(strval($order_info['pay_price'] * 100))  != $wx_res['total_fee']){
             return $this->sendRes('订单金额不一致',false);
         }
         //如果已经处理过该订单，无须再继续发送请求

@@ -1,20 +1,13 @@
-<div class="row  border-bottom">
-	<div class="col-lg-12">
-		<div class="tab_title">
-			<ul class="nav nav-pills">
-								<li  >
-					<a href="/web/finance/index">订单列表</a>
-				</li>
-								<li  class="current"  >
-					<a href="/web/finance/account">财务流水</a>
-				</li>
-							</ul>
-		</div>
-	</div>
-</div>
+<?php
+use app\common\services\UrlService;
+use app\common\services\UtilService;  
+use app\common\services\ContactService;
+?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/finance/tab_finance_common.php',['current' => 'account']);?>
+
 <div class="row">
     <div class="col-lg-12 m-t">
-        <p>总收款金额：358.88元</p>
+        <p>总收款金额：<?=$total_price;?></p>
     </div>
 	<div class="col-lg-12">
 		<table class="table table-bordered m-t">
@@ -26,30 +19,22 @@
 			</tr>
 			</thead>
 			<tbody>
-												<tr>
-						<td>2017031230</td>
-						<td>135.00</td>
-						<td>2017-03-12 22:28</td>
-					</tr>
-									<tr>
-						<td>2017031231</td>
-						<td>135.00</td>
-						<td>2017-03-12 22:28</td>
-					</tr>
-									<tr>
-						<td>2017031228</td>
-						<td>88.88</td>
-						<td>2017-03-12 15:51</td>
-					</tr>
-										</tbody>
+				<?php foreach($orders as $_item):?>
+				<tr>
+					<td><?=$_item['id'];?></td>
+					<td><?=$_item['pay_price'];?></td>
+					<td><?=$_item['pay_time'];?></td>
+				</tr>
+				<?php endforeach;?>
+			</tbody>
 		</table>
 		<div class="row">
-	<div class="col-lg-12">
-		<span class="pagination_count" style="line-height: 40px;">共3条记录 | 每页50条</span>
-		<ul class="pagination pagination-lg pull-right" style="margin: 0 0 ;">
-										                    <li class="active"><a href="javascript:void(0);">1</a></li>
-                            					</ul>
-	</div>
-</div>
+			<!--分页文件统一封装在其他模板文件中-->
+			<?=\Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+			       'pages' => $pages,
+			       'search_conditions' => $search_conditions,
+			       'url' => '/finance/account',
+			]);?>
+		</div>
 	</div>
 </div>

@@ -1,34 +1,33 @@
-<div class="row  border-bottom">
-	<div class="col-lg-12">
-		<div class="tab_title">
-			<ul class="nav nav-pills">
-								<li  class="current"  >
-					<a href="/web/finance/index">订单列表</a>
-				</li>
-								<li  >
-					<a href="/web/finance/account">财务流水</a>
-				</li>
-							</ul>
-		</div>
-	</div>
-</div><div class="row m-t wrap_info">
+<?php
+use app\common\services\UrlService;
+use app\common\services\UtilService;  
+use app\common\services\ContactService;
+use \app\common\services\StaticService;
+StaticService::includeAppJs( "/js/web/finance/pay_info.js",\app\assets\WebAsset::className() );
+?>
+<?=\Yii::$app->view->renderFile('@app/modules/web/views/finance/tab_finance_common.php',['current' => '']);?>
+
+<div class="row m-t wrap_info">
 	<div class="col-lg-12">
 		<div class="row">
 			<div class="col-lg-12">
-								<div class="m-b-md">
+				<?php if( $order_info['status'] == 1 && $order_info['express_status'] == -7 ):?>
+					<a class="btn btn-outline btn-primary pull-right express_send" href="<?=UrlService::buildNullUrl();?>">确认发货</a>
+				<?php endif;?>
+				<div class="m-b-md">
 					<h2>订单信息</h2>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<p class="m-t">订单编号：2017031732</p>
-				<p>会员姓名：郭威</p>
-				<p>会员手机：1231231312</p>
-				<p>订单总价：179.30</p>
-				<p>订单状态：已关闭</p>
-								<p>创建时间：2017-03-17 14:57</p>
-                <p>收货地址：浙江省宁波市330203太阳出来了爬山平（郭威）13774355081</p>
+				<p class="m-t">订单编号：<?=UtilService::encode($order_info['id']);?></p>
+				<p>会员姓名：<?=UtilService::encode($order_info['member_name']);?></p>
+				<p>会员手机：<?=UtilService::encode($order_info['member_mobile']);?></p>
+				<p>订单总价：<?=UtilService::encode($order_info['pay_price']);?></p>
+				<p>订单状态：<?=UtilService::encode($order_info['status']);?></p>
+				<p>创建时间：<?=UtilService::encode($order_info['created_time']);?></p>
+                <p>收货信息：<?=UtilService::encode($order_info['member_address']);?></p>
 			</div>
 		</div>
 		<div class="row m-t">
@@ -56,17 +55,14 @@
 									</tr>
 									</thead>
 									<tbody>
-																			<tr>
-											<td>Hadoop权威指南(第3版)</td>
-											<td>1</td>
-											<td>78.20</td>
+										<?php foreach($order_info['pay_items'] as $_item):?>
+										<tr>
+											<td><?=$_item['book_name'];?></td>
+											<td><?=$_item['quantity'];?></td>
+											<td><?=$_item['price'];?></td>
 										</tr>
-																			<tr>
-											<td>高性能MySQL（第3版）</td>
-											<td>1</td>
-											<td>101.10</td>
-										</tr>
-																		</tbody>
+										<?php endforeach;?>
+									</tbody>
 								</table>
 							</div>
 						</div>
@@ -91,7 +87,7 @@
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">发货信息:</label>
                                 <div class="col-lg-10">
-                                    <label class="control-label">浙江省宁波市330203太阳出来了爬山平（郭威）13774355081</label>
+                                    <label class="control-label"><?=UtilService::encode($order_info['member_address']);?></label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -106,7 +102,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <input type="hidden" name="pay_order_id" value="32">
+                <input type="hidden" name="pay_order_id" value="<?=$order_info['id'];?>">
                 <button type="button" class="btn btn-primary save">保存</button>
             </div>
         </div>

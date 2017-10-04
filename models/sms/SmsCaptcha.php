@@ -40,6 +40,7 @@ class SmsCaptcha extends \yii\db\ActiveRecord
         ];
         $this->setAttributes($all_data);
         return $this->save(0);
+           
     }
     /**
      * @inheritdoc

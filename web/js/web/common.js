@@ -211,7 +211,7 @@ $('#button-submit').click(function(){
     });
 
     //将获得的post传到服务器
-    console.log(postData);
+    //console.log(postData);
     var url = SCOPE.save_url;
     var jump_url = SCOPE.jump_url;
     $.post(url,postData,function(result){

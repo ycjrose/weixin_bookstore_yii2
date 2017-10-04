@@ -1,7 +1,7 @@
 <?php
 use app\common\services\UrlService;
 use app\common\services\UtilService; 
-use app\common\services\ContactService;
+use app\common\services\ContactService; 
 ?>
 <?=\Yii::$app->view->renderFile('@app/modules/web/views/member/tab_common_member.php',['current' => 'index']);?>
 
@@ -53,7 +53,7 @@ use app\common\services\ContactService;
             <tbody>
                 <?php foreach($members as $_item):?>
 					<tr>
-                        <td><img alt="image" class="img-circle" src="" style="width: 40px;height: 40px;"></td>
+                        <td><img alt="image" class="img-circle" src="<?=$_item['avatar']?>" style="width: 40px;height: 40px;"></td>
                         <td><?=UtilService::encode($_item['nickname']);?></td>
                         <td><?=UtilService::encode($_item['mobile']);?></td>
                         <td><?=ContactService::$sex[$_item['sex']];?></td>
@@ -81,13 +81,13 @@ use app\common\services\ContactService;
         </table>
 		<div class="row">
 
-        <!--分页文件统一封装在其他模板文件中-->
-	<?=\Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
-        'pages' => $pages,
-        'search_conditions' => $search_conditions,
-        'url' => '/member',
-    ]);?>
-</div>
+            <!--分页文件统一封装在其他模板文件中-->
+        	<?=\Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+                'pages' => $pages,
+                'search_conditions' => $search_conditions,
+                'url' => '/member',
+            ]);?>
+        </div>
     </div>
 </div>
 <script type="text/javascript">

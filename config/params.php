@@ -8,7 +8,8 @@ return [
     	'brand' => '/uploads/brand',
     	'book' => '/uploads/book',
     ],
-    'domain' => 'http://ycjbook.tunnel.echomod.cn',
+    //'domain' => 'http://ycjbook.tunnel.echomod.cn',
+    'domain' => 'http://www.ycjblog.top',
 
     'tuling_key' => '33f7d08d488b44868b0f03a6eee16191',
         

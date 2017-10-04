@@ -4,7 +4,7 @@ $('.order_header').click(function(){
 $('.close').click(function(){
 	if(!confirm('是否取消订单')){
 		return;
-	}
+	} 
 	var url = common_ops.buildMUrl('/order/ops');
 	var data = {action:'remove',id:$(this).attr('data')};
 	$.post(url,data,function(result){

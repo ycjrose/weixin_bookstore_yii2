@@ -7,8 +7,10 @@ use app\common\services\UrlService;
 use app\common\services\UtilService;
 use app\common\services\PayOrderService;
 use app\models\book\Book;
+use app\models\City;
 use app\models\member\MemberCart;
 use app\models\member\MemberFav;
+use app\models\member\MemberAddress;
 
 class ProductController extends BaseController{
 
@@ -54,11 +56,13 @@ class ProductController extends BaseController{
     }
     public function actionOrder(){
         if(\Yii::$app->request->isPost){
+            $sc = trim( $this->post("sc","") );
             $product_item = $this->post('product_item',[]);
             $address_id = intval($this->post('address_id'));
-            // if(!$address_id){
-            //     return $this->renderJson(-1,'地址不存在');
-            // }
+
+            if(!$address_id){
+                return $this->renderJson(-1,'地址不存在');
+            }
             if(!$product_item){
                 return $this->renderJson(-1,'没有选择书籍');
             }
@@ -97,31 +101,64 @@ class ProductController extends BaseController{
             if(!$res){
                 return $this->renderJson(-1,'提交失败，原因是：'.PayOrderService::getErrMsg());
             }
+            if( $sc == "cart" ){//如果从购物车创建订单，需要清空购物车了
+                MemberCart::deleteAll([ 'member_id' => $this->current_user['id'] ]);
+            }
             return $this->renderJson(200,'提交订单成功，去支付',['url' => UrlService::buildMUrl('/pay/buy/?pay_order_id='.$res['id'])]);
                 
         }
     	//下订单页面
         $id = intval($this->get('id'));
         $quantity = intval($this->get('quantity'));
+        $sc = $this->get("sc","product");//sc来源1直接下单2购物车
         $reback_url = UrlService::buildMUrl('/product');
-        if(!$id || !$quantity){
-            $this->redirect($reback_url);
+        $books = [];
+        $total_price = 0 ;
+        if($sc == 'cart'){//从购物车下单
+
+            $carts = MemberCart::find()->where( ['member_id' => $this->current_user['id']] )->asArray()->all();
+            $books_info = Book::find()->where( ['id' => array_column($carts, 'book_id')] )->indexBy('id')->asArray()->all();
+            foreach ($carts as $_item) {
+                $books[] = [
+                    'id' => $books_info[ $_item['book_id'] ]['id'],
+                    'name' => $books_info[ $_item['book_id'] ]['name'],
+                    'price' => $books_info[ $_item['book_id'] ]['price'],
+                    'main_image' => $books_info[ $_item['book_id'] ]['main_image'],
+                    'quantity' => $_item['quantity'],
+                ];
+                $total_price += $books_info[ $_item['book_id'] ]['price'] * $_item['quantity'];
+            }
+
+        }else{//直接下单
+            if(!$id || !$quantity){
+                $this->redirect($reback_url);
+            }
+            $book_info = Book::find()->where(['id' => $id,'status' => 1])->asArray()->one();
+            if(!$book_info){
+                $this->redirect($reback_url);
+            }
+            $books[] = [
+                'id' => $book_info['id'],
+                'name' => $book_info['name'],
+                'price' => $book_info['price'],
+                'main_image' => $book_info['main_image'],
+                'quantity' => $quantity,
+            ];
+            $total_price = $book_info['price'] * $quantity;
         }
-        $book_info = Book::find()->where(['id' => $id,'status' => 1])->asArray()->one();
-        if(!$book_info){
-            $this->redirect($reback_url);
+        //获取收货地址
+        $address_info = MemberAddress::find()->select(['id','area_id','is_default','address'])->where(['member_id' => $this->current_user['id'],'status' => 1])->orderBy(['is_default' => SORT_DESC,'id' => SORT_DESC])->asArray()->all();
+        
+        $citys = City::find()->select(['id','province','city','area'])->where(['id' => array_column($address_info, 'area_id')])->indexBy('id')->asArray()->all();
+        foreach ($address_info as $k => $v) {
+            $city_info = $citys[ $v['area_id'] ];
+            $address_info[$k]['really_address'] = $city_info['province'].$city_info['city'].$city_info['area'].$v['address'];
         }
-        $books[] = [
-            'id' => $book_info['id'],
-            'name' => $book_info['name'],
-            'price' => $book_info['price'],
-            'main_image' => $book_info['main_image'],
-            'quantity' => $quantity,
-        ];
-        $total_price = $book_info['price'] * $quantity;
     	return $this->render('order',[
             'books' => $books,
             'total_price' => $total_price,
+            'address_info' => $address_info,
+            'sc' => $sc,
         ]);
     }
     public function actionSearch(){
@@ -144,7 +181,12 @@ class ProductController extends BaseController{
         }
         //取消收藏
         if( $act == "del" ){
-            
+            $fav_info = MemberFav::find()->where( ['member_id' => $this->current_user['id'],'id' => $id ] )->one();
+            if($fav_info){
+                $fav_info->delete();
+                return $this->renderJson(200,'操作成功');
+            }
+            return $this->renderJson(-1,'没找到操作的项');
         }
 
 
@@ -177,7 +219,12 @@ class ProductController extends BaseController{
         }
         //从购物车移除
         if( $act == "del" ){
-            
+            $cart_info = MemberCart::find()->where( ['member_id' => $this->current_user['id'],'id' => $id ] )->one();
+            if($cart_info){
+                $cart_info->delete();
+                return $this->renderJson(200,'操作成功');
+            }
+            return $this->renderJson(-1,'没找到操作的项');
         }
 
 

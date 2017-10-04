@@ -1,3 +1,9 @@
+<?php
+use \app\common\services\UrlService;
+use \app\common\services\StaticService;
+StaticService::includeAppJs( "/plugins/raty/jquery.raty.min.js",\app\assets\MAsset::className() );
+StaticService::includeAppJs( "/js/m/user/comment_set.js",\app\assets\MAsset::className() );
+?>
 <div style="min-height: 500px;">
 	<div class="page_title clearfix">
     <span>我要评论</span>
@@ -13,8 +19,8 @@
     </div>
 </div>
 <div class="op_box">
-    <input type="hidden" name="pay_order_id" value="">
-    <input type="hidden" name="book_id" value="0">
+    <input type="hidden" name="pay_order_id" value="<?=$pay_order_id;?>">
+    <input type="hidden" name="book_id" value="<?=$book_id;?>">
     <input  type="button" value="确定" class="red_btn save" style="width: 100%;" />
 </div>
 </div>

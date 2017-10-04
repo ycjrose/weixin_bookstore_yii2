@@ -45,7 +45,7 @@ class BookController extends BaseController{
         //分页操作
         $page_size = 10;//每页多少条记录
         $page_count = $query->count();
-        $page_total = ceil($page_count / $page_size);
+        $page_total = ceil($page_count / $page_size); 
         //把所有分类列出来
         $cat_info = BookCat::find()->orderBy(['weight' => SORT_DESC])->asArray()->all();
         $cat = [];

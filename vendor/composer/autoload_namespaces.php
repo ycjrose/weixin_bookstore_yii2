@@ -11,4 +11,5 @@ return array(
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
     'Codeception\\' => array($vendorDir . '/codeception/specify/src'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
+    'BaconQrCode' => array($vendorDir . '/bacon/bacon-qr-code/src'),
 );

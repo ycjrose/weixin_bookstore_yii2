@@ -5,6 +5,7 @@ namespace app\common\services;
 use app\common\services\BaseService;
 use app\common\services\book\BookService;
 use app\common\services\weixin\TemplateService;
+use app\common\services\QueueListService;
 use app\models\book\Book;
 use app\models\pay\PayOrder;
 use app\models\pay\PayOrderCallbackData;
@@ -159,7 +160,18 @@ class PayOrderService extends BaseService{
 			$transaction->rollBack();
 			return self::_err(-1,$e->getMessage());
 		}
-		$res = TemplateService::payNotice($order_info['id']);
+		//$res = TemplateService::payNotice($order_info['id']);
+		//以消息队列的方式发送微信模板消息给用户
+		$val = [
+			'member_id' => $order_info['member_id'],
+			'pay_order_id' => $order_info['id'],
+			'created_time' => microtime(),
+		];
+
+		$res2 = QueueListService::addQueue('pay',$val);
+		if(!$res2){
+			return self::_err(-1,QueueListService::getErrMsg());
+		}
 		return true;
 	}
 	//记录微信发来的异步回调信息

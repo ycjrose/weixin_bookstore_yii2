@@ -7,16 +7,20 @@ use app\models\book\Book;
 use yii\log\FileTarget;
 use app\common\components\HttpClient;
 use app\common\services\weixin\TemplateService;
+use app\commands\QueueListController;
+use app\models\market\MarketQrcode;
+use app\models\market\QrcodeScanHistory;
 
 class MsgController extends BaseController{
 
       public function actionTest(){
            //$vipSay = '南京天气';
-           // $res = TemplateService::payNotice(2);
+           // $res = TemplateService::bindNotice(19);
            // if(!$res){
            //      var_dump(TemplateService::getErrMsg()) ;
            // }
-       
+         // $queue_list = new QueueListController();   
+         // $queue_list->actionBind_list();
       }
 
 
@@ -36,6 +40,7 @@ class MsgController extends BaseController{
     public function SendMsg(){
 
         $postStr = file_get_contents('php://input');
+        
         //$this->record_log('[xml:]'.$postStr);
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 
@@ -43,6 +48,24 @@ class MsgController extends BaseController{
         if(strtolower($postObj->MsgType) == 'event'){
             //关注事件
             if(strtolower($postObj->Event) == 'subscribe'){
+                //如果通过扫码关注
+                if(isset($postObj->EventKey)){
+                    $event_key = $postObj->EventKey;
+                    $qrcode_key = str_replace('qrscene_', '', $event_key);
+                    $qrcode_info = MarketQrcode::findOne(['id' => $qrcode_key]);
+                    if($qrcode_info){
+                        //操作数据库
+                        $qrcode_info->total_scan_count += 1;
+                        $qrcode_info->updated_time = date('Y-m-d H:i:s');
+                        $qrcode_info->update(0);
+
+                        $model_scan_history = new QrcodeScanHistory();
+                        $model_scan_history->openid = $postObj->FromUserName;
+                        $model_scan_history->qrcode_id = $qrcode_info['id'];
+                        $model_scan_history->created_time = date('Y-m-d H:i:s');
+                        $model_scan_history->save(0);
+                    }
+                }
                 //回复消息
                 $template = "<xml>
                             <ToUserName><![CDATA[%s]]></ToUserName>

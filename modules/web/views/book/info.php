@@ -38,7 +38,7 @@ use app\common\services\UtilService;
                     <div class="panel-heading">
                         <div class="panel-options">
                             <ul class="nav nav-tabs">
-                                <li >
+                                <li class="active">
                                     <a href="#tab-1" data-toggle="tab" aria-expanded="false">销售历史</a>
                                 </li>
                                 <li>
@@ -50,7 +50,7 @@ use app\common\services\UtilService;
 
                     <div class="panel-body">
                         <div class="tab-content">
-                            <div class="tab-pane" id="tab-1">
+                            <div class="tab-pane active" id="tab-1">
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
