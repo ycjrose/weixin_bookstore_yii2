@@ -21,6 +21,13 @@ $config = [
             ],
         ],
         'db' => $db,
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '/' => '/default/index',
+            ],
+        ],
     ],
     'params' => $params,
     /*
