@@ -7,7 +7,7 @@ use app\common\services\UrlService;
 use app\common\services\UtilService;
 use app\common\services\PayOrderService;
 use app\common\services\weixin\PayApiService;
-use app\models\Pay\PayOrder;
+use app\models\pay\PayOrder;
 use yii\log\FileTarget;
 use app\models\member\OauthMemberBind;
 
