@@ -11,6 +11,7 @@ use app\common\services\PayOrderService;
 class PayController extends BaseController{
 	
 	public function actionReset_stock(){
+		date_default_timezone_set('PRC');
 		$before_date = date('Y-m-d H:i:s',time() - 30 * 60);
 		$before_orders = PayOrder::find()->where(['status' => -8])->andWhere(['<=','created_time',$before_date])->asArray()->all();
 		if(!$before_orders){
