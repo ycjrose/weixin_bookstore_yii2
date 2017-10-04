@@ -29,7 +29,7 @@ $('.confirm_express').click(function(){
 		}
 		if(result.code == 200){
 			alert(result.msg);
-			window.location.href = common_ops.buildMUrl('/user/order');
+			window.location.href = window.location.href+"?id="+10000*Math.random();
 		}
 	},'JSON');
 });
