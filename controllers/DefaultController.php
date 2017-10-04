@@ -45,7 +45,7 @@ class DefaultController extends BaseWebController{
 		if(!$res1){
 			return $this->renderJson(-1,'系统出错');
 		}
-		接入发短信的接口，向用户发短信
+		//接入发短信的接口，向用户发短信
 		$res2 = SmsCodeService::sendSmsCode($mobile,$model_sms->captcha);
 		if(!$res2){
 			return $this->renderJson(-1,SmsCodeService::getErrMsg());
