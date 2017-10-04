@@ -21,7 +21,7 @@ class PayController extends BaseController{
 				case 1:
 					$res = PayOrderService::closeOrder($_item['id']);
 					if(!$res){
-						return $this->echoLog('do fail:'.$_item['id'])
+						return $this->echoLog('do fail:'.$_item['id']);
 					}
 					break;
 			}
