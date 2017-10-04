@@ -22,6 +22,8 @@ $config = [
         ],
         'db' => $db,
         'urlManager' => [
+            'scriptUrl' => '',
+            'baseUrl' => '',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
