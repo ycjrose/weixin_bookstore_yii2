@@ -21,7 +21,7 @@ AppAsset::register($this);
         <div class="navbar-collapse collapse pull-left">
             <ul class="nav navbar-nav "> 
                 <li><a href="<?=UrlService::buildWwwUrl('/');?>">首页</a></li>
-                <li><a target="_blank" href="http://47.93.59.20/">博客</a></li>
+                <li><a target="_blank" href="http://www.ycjblog.top:8086/">博客</a></li>
                 <li><a href="<?=UrlService::buildWebUrl('/user/login');?>">管理后台</a></li>
             </ul>
         </div>
