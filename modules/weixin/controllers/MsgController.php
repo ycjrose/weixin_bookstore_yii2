@@ -26,14 +26,23 @@ class MsgController extends BaseController{
 
     public function actionIndex(){  
 
-        if($this->checkSignature() && $_GET['echostr']){
-            //用于微信第一次认证
-        	return $_GET['echostr'];
-        }else{
+        // if($this->checkSignature() && $_GET['echostr']){
+        //     //用于微信第一次认证
+        // 	return $_GET['echostr'];
+        // }else{
 
-            return $this->SendMsg();
+        //     return $this->SendMsg();
+        // }
+        if( !$this->checkSignature() ){
+            //$this->record_log( "校验错误" );
+            //可以直接回复空串，微信服务器不会对此作任何处理，并且不会发起重试
+            return 'error signature ~~';
         }
-           
+
+        if( array_key_exists('echostr',$_GET) && $_GET['echostr']){//用于微信第一次认证的
+            return $_GET['echostr'];
+        }
+        $this->SendMsg();
        
     }
     //接受推送并回复

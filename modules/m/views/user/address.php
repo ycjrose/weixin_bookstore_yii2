@@ -28,7 +28,7 @@ StaticService::includeAppJs('/js/m/user/address.js',app\assets\MAsset::className
 </ul>
 <?php else:?>
     <div class="no-data">
-        连个收货地址都没有，干什么互联网哇
+        连个收货地址都没有~~~~
     </div>
 <?php endif;?>
 

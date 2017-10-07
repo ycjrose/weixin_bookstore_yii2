@@ -10,7 +10,7 @@ StaticService::includeAppJs( "/js/m/product/order.js",\app\assets\MAsset::classN
 </div>
 <div class="order_box">
     <div class="order_header">
-        <h2>确认收货地址</h2>
+        <h2><a href="<?=UrlService::buildMUrl('/user/address');?>">确认收货地址</a>></h2>
     </div>
 
     <ul class="address_list">
