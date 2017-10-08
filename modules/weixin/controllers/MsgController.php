@@ -13,7 +13,7 @@ use app\models\market\QrcodeScanHistory;
 
 class MsgController extends BaseController{
 
-      public function actionTest(){
+    public function actionTest(){
            //$vipSay = '南京天气';
            // $res = TemplateService::bindNotice(19);
            // if(!$res){
@@ -44,135 +44,126 @@ class MsgController extends BaseController{
         //$this->record_log('[xml:]'.$postStr);
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 
-        //如果是订阅事件
-        if(strtolower($postObj->MsgType) == 'event'){
-            //关注事件
-            if(strtolower($postObj->Event) == 'subscribe'){
-                //如果通过扫码关注
-                if(isset($postObj->EventKey)){
-                    $event_key = $postObj->EventKey;
-                    $qrcode_key = str_replace('qrscene_', '', $event_key);
-                    $qrcode_info = MarketQrcode::findOne(['id' => $qrcode_key]);
-                    if($qrcode_info){
-                        //操作数据库
-                        $qrcode_info->total_scan_count += 1;
-                        $qrcode_info->updated_time = date('Y-m-d H:i:s');
-                        $qrcode_info->update(0);
-
-                        $model_scan_history = new QrcodeScanHistory();
-                        $model_scan_history->openid = $postObj->FromUserName;
-                        $model_scan_history->qrcode_id = $qrcode_info['id'];
-                        $model_scan_history->created_time = date('Y-m-d H:i:s');
-                        $model_scan_history->save(0);
-                    }
-                }
-                //回复消息
-                $template = "<xml>
-                            <ToUserName><![CDATA[%s]]></ToUserName>
-                            <FromUserName><![CDATA[%s]]></FromUserName>
-                            <CreateTime>%s</CreateTime>
-                            <MsgType><![CDATA[%s]]></MsgType>
-                            <Content><![CDATA[%s]]></Content>
-                            </xml>";
-                $toUser = $postObj->FromUserName;
-                $fromUser = $postObj->ToUserName;
-                $time = time();
-                $msgType = 'text';
-                $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书";
-                $send_info = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);
+        switch (strtolower($postObj->MsgType)) {
+            //如果是订阅事件
+            case 'even':
                 
-                return $send_info;
-            }
-        }
-        //如果是用户发来的消息
-        if(strtolower($postObj->MsgType) == 'text'){
-            $vipSay = trim($postObj->Content);
+                //关注事件
+                if(strtolower($postObj->Event) == 'subscribe'){
+                    //如果通过扫码关注
+                    if(isset($postObj->EventKey)){
+                        $event_key = $postObj->EventKey;
+                        $qrcode_key = str_replace('qrscene_', '', $event_key);
+                        $qrcode_info = MarketQrcode::findOne(['id' => $qrcode_key]);
+                        if($qrcode_info){
+                            //操作数据库
+                            $qrcode_info->total_scan_count += 1;
+                            $qrcode_info->updated_time = date('Y-m-d H:i:s');
+                            $qrcode_info->update(0);
 
-            if(mb_strpos($vipSay,'#') === 0){
-                //查询图书信息然后发图文
-                $vipSay = mb_substr($vipSay, 1);
-                $res = $this->search($vipSay);
-                if(!$res){
-                    $content = '该图书不存在';
-                    return $this->sendTextMsg($postObj,$content);
-                }
-                $imageMsgs = [];
-                foreach ($res as $value) {
-                    $imageMsgs[] = [
-                        'title' => $value['name'],
-                        'description' => mb_substr( strip_tags( $value['summary'] ),0,20,"utf-8" ),
-                        'picUrl' => \Yii::$app->params['domain'].UrlService::buildPicUrl( "book",$value['main_image'] ),
-                        'url' => \Yii::$app->params['domain'].UrlService::buildMUrl( "/product/info",[ 'id' => $value['id'] ] ),
-                    ];
-                }
-
-               return $this->sendImageMsg($postObj,$imageMsgs);
-
-            }
-            else{
-
-                    // switch ($vipSay) {
-                    //     case '客服电话':
-                    //         $content = '客服ycj:13255287051';
-                    //         break;
-                    //     case '博客':
-                    //         $content = '<a href="http://www.ycjblog.top:8086/">点击博客地址</a>';
-                    //         break;
-                    //     default:
-                    //         $content = '请输入正确的内容';
-                    //         break;
-                    // }
-                //接入图灵机器人
-                $tuling_url = 'http://www.tuling123.com/openapi/api';
-                $key = \Yii::$app->params['tuling_key'];
-                $array_data = [
-                    'key' => $key,
-                    'info' => $vipSay,
-                    'userid' => $postObj->FromUserName,
-                ];
-                $json_data = json_encode($array_data,JSON_UNESCAPED_UNICODE);
-                HttpClient::setHeader(['Content-Type: application/json; charset=UTF-8']);
-                $res = HttpClient::post($tuling_url,$json_data);
-                $res = @json_decode($res,true);
-                if(!$res){
-
-                    $content = '机器人小姐故障啦~~';
-
-                }elseif(isset($res['url'])){//有url的回答
-
-                        $content = $res['text']."\n".$res['url'];
+                            $model_scan_history = new QrcodeScanHistory();
+                            $model_scan_history->openid = $postObj->FromUserName;
+                            $model_scan_history->qrcode_id = $qrcode_info['id'];
+                            $model_scan_history->created_time = date('Y-m-d H:i:s');
+                            $model_scan_history->save(0);
+                        }
+                    }
+                    //回复消息
+                    $template = "<xml>
+                                <ToUserName><![CDATA[%s]]></ToUserName>
+                                <FromUserName><![CDATA[%s]]></FromUserName>
+                                <CreateTime>%s</CreateTime>
+                                <MsgType><![CDATA[%s]]></MsgType>
+                                <Content><![CDATA[%s]]></Content>
+                                </xml>";
+                    $toUser = $postObj->FromUserName;
+                    $fromUser = $postObj->ToUserName;
+                    $time = time();
+                    $msgType = 'text';
+                    $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书";
+                    $send_info = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);
                     
-                }elseif(isset($res['list'])){//多条复杂信息则发送图文消息（例如想看今天新闻）
+                    return $send_info;
+                }
+                break;
+            //如果是用户发来的消息
+            case 'text':
+                
+                $vipSay = trim($postObj->Content);
 
+                if(mb_strpos($vipSay,'#') === 0){
+                    //查询图书信息然后发图文
+                    $vipSay = mb_substr($vipSay, 1);
+                    $res = $this->search($vipSay);
+                    if(!$res){
+                        $content = '该图书不存在';
+                        return $this->sendTextMsg($postObj,$content);
+                    }
                     $imageMsgs = [];
-                    foreach ($res['list'] as $_item) {
-                        if(isset($_item['article'])){
-                            $title = $_item['article'];
-                        }
-                        if(isset($_item['name'])){
-                            $title = $_item['name'];
-                        }
+                    foreach ($res as $value) {
                         $imageMsgs[] = [
-                            'title' => isset($title) ? $title : '默认标题',
-                            'description' => '内容请点进链接细看',
-                            'picUrl' => $_item['icon'],
-                            'url' => $_item['detailurl'],
+                            'title' => $value['name'],
+                            'description' => mb_substr( strip_tags( $value['summary'] ),0,20,"utf-8" ),
+                            'picUrl' => \Yii::$app->params['domain'].UrlService::buildPicUrl( "book",$value['main_image'] ),
+                            'url' => \Yii::$app->params['domain'].UrlService::buildMUrl( "/product/info",[ 'id' => $value['id'] ] ),
                         ];
                     }
-                    return $this->sendImageMsg($postObj,$imageMsgs);
 
-                }else{//只有文本消息的回答
-                    $content = $res['text'];
+                   return $this->sendImageMsg($postObj,$imageMsgs);
+
+                }else{
+                    //接入图灵机器人
+                    $tuling_url = 'http://www.tuling123.com/openapi/api';
+                    $key = \Yii::$app->params['tuling_key'];
+                    $array_data = [
+                        'key' => $key,
+                        'info' => $vipSay,
+                        'userid' => $postObj->FromUserName,
+                    ];
+                    $json_data = json_encode($array_data,JSON_UNESCAPED_UNICODE);
+                    HttpClient::setHeader(['Content-Type: application/json; charset=UTF-8']);
+                    $res = HttpClient::post($tuling_url,$json_data);
+                    $res = @json_decode($res,true);
+                    if(!$res){
+
+                        $content = '机器人小姐故障啦~~';
+
+                    }elseif(isset($res['url'])){//有url的回答
+
+                            $content = $res['text']."\n".$res['url'];
+                        
+                    //}elseif(isset($res['list'])){//多条复杂信息则发送图文消息（例如想看今天新闻）
+
+                        // $imageMsgs = [];
+                        // foreach ($res['list'] as $_item) {
+                        //     if(isset($_item['article'])){
+                        //         $title = $_item['article'];
+                        //     }
+                        //     if(isset($_item['name'])){
+                        //         $title = $_item['name'];
+                        //     }
+                        //     $imageMsgs[] = [
+                        //         'title' => isset($title) ? $title : '默认标题',
+                        //         'description' => '内容请点进链接细看',
+                        //         'picUrl' => $_item['icon'],
+                        //         'url' => $_item['detailurl'],
+                        //     ];
+                        // }
+                        // return $this->sendImageMsg($postObj,$imageMsgs);
+
+                    }else{//只有文本消息的回答
+                        $content = $res['text'];
+                    }  
+                    return $this->sendTextMsg($postObj,$content);
+
                 }  
-                return $this->sendTextMsg($postObj,$content);
-
-            }
-
-            
+                break;
+            default:
+                return '';
+                break;
         }
         
-
-       
+         
     }
     //从数据库查询图书信息
     private function search( $kw ){
