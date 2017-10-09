@@ -31,7 +31,7 @@ class MsgController extends BaseController{
         // 	return $_GET['echostr'];
         // }else{
             if( !$this->checkSignature() ){
-                $this->record_log( "校验错误" );
+                //$this->record_log( "校验错误" );
                 //可以直接回复空串，微信服务器不会对此作任何处理，并且不会发起重试
                 return '';
             }
@@ -50,7 +50,7 @@ class MsgController extends BaseController{
 
         $postStr = file_get_contents('php://input');
         
-        $this->record_log('[xml:]'.$postStr);
+        //$this->record_log('[xml:]'.$postStr);
 
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 
