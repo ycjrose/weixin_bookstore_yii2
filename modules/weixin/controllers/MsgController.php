@@ -41,7 +41,7 @@ class MsgController extends BaseController{
             }
 
             return $this->SendMsg();
-        }
+        //}
         
        
     }
