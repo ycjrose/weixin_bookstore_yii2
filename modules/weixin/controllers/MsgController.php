@@ -36,7 +36,7 @@ class MsgController extends BaseController{
                 return 'error signature ~~';
             }
 
-            if( array_key_exists('echostr',$_GET) && isset($_GET['echostr']) ){//用于微信第一次认证的
+            if(  isset($_GET['echostr']) ){//用于微信第一次认证的
                 return $_GET['echostr'];
             }
 
@@ -189,7 +189,7 @@ class MsgController extends BaseController{
     	$timestamp = trim($this->get('timestamp'));
     	$nonce = trim($this->get('nonce'));
     	$tmpArr = array(\Yii::$app->params['weixin']['token'],$timestamp,$nonce);
-    	sort($tmpArr);
+    	sort($tmpArr,SORT_STRING);
     	$tmpStr = implode($tmpArr);
     	$tmpStr = sha1($tmpStr);
 
