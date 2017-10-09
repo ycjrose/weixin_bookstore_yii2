@@ -36,7 +36,7 @@ class MsgController extends BaseController{
                 return 'error signature ~~';
             }
 
-            if( array_key_exists('echostr',$_GET) && $_GET['echostr']){//用于微信第一次认证的
+            if( array_key_exists('echostr',$_GET) && isset($_GET['echostr']) ){//用于微信第一次认证的
                 return $_GET['echostr'];
             }
 
