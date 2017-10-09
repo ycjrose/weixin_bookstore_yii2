@@ -2513,3 +2513,38 @@ method: post
 data: "{\"touser\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\",\"template_id\":\"qRF9PXOKHHLMft2PCdDtyA5FJgPuOpax1T56TWVl71Y\",\"url\":\"http:\\\/\\\/ycjbook.tunnel.echomod.cn\\\/m\\\/user\",\"data\":{\"first\":{\"value\":\"\u606d\u559c\u60a8\u624b\u673a\u53f7\u6210\u529f\u7ed1\u5b9a\u8be5\u56fe\u4e66\u5546\u57ce\",\"color\":\"#173177\"},\"keyword1\":{\"value\":\"13976630291\",\"color\":\"#173177\"},\"keyword2\":{\"value\":\"2017-10-04 17:18:43\",\"color\":\"#173177\"},\"keyword3\":{\"value\":\"\u957f\u671f\u6709\u6548\",\"color\":\"#173177\"},\"remark\":{\"value\":\"\u70b9\u51fb\u67e5\u770b\u8be6\u60c5\",\"color\":\"#173177\"}}}" 
 result: {"errcode":0,"errmsg":"ok","msgid":417694681} 
 errorno: 0 error:  
+2017-10-09 21:44:32 [ time:0.20122480392456 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"没差吗？你这眼睛有点青光眼吧！"} 
+errorno: 0 error:  
+2017-10-09 21:45:08 [ time:0.2315719127655 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"原来你喜欢这样得调调。"} 
+errorno: 0 error:  
+2017-10-09 21:45:25 [ time:0.22235703468323 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"没差吗？你这眼睛有点青光眼吧！"} 
+errorno: 0 error:  
+2017-10-09 21:45:26 [ time:0.18530678749084 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"怎么老是一句话"} 
+errorno: 0 error:  
+2017-10-09 21:47:31 [ time:0.39442491531372 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"没差吗？你这眼睛有点青光眼吧！"} 
+errorno: 0 error:  
+2017-10-09 21:47:37 [ time:0.24380207061768 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"原来你喜欢这样得调调。"} 
+errorno: 0 error:  
+2017-10-09 21:48:47 [ time:0.19622802734375 ] url: http://www.tuling123.com/openapi/api 
+method: post 
+data: "{\"key\":\"33f7d08d488b44868b0f03a6eee16191\",\"info\":\"\u4e00\u6837\",\"userid\":{\"0\":\"o2Zz0wplpew1Q5HSSTZhLSECnmAU\"}}" 
+result: {"code":100000,"text":"没差吗？你这眼睛有点青光眼吧！"} 
+errorno: 0 error:  
