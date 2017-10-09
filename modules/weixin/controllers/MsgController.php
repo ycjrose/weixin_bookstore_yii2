@@ -41,7 +41,7 @@ class MsgController extends BaseController{
 
         $postStr = file_get_contents('php://input');
         
-        //$this->record_log('[xml:]'.$postStr);
+        $this->record_log('[xml:]'.$postStr);
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 
         switch (strtolower($postObj->MsgType)) {
