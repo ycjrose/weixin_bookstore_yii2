@@ -50,7 +50,7 @@ class MsgController extends BaseController{
 
         $postStr = file_get_contents('php://input');
         
-        //$this->record_log('[xml:]'.$postStr);
+        $this->record_log('[xml:]'.$postStr);
 
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 
@@ -141,25 +141,7 @@ class MsgController extends BaseController{
                     }elseif(isset($res['url'])){//有url的回答
 
                             $content = $res['text']."\n".$res['url'];
-                        
-                    //}elseif(isset($res['list'])){//多条复杂信息则发送图文消息（例如想看今天新闻）
-
-                        // $imageMsgs = [];
-                        // foreach ($res['list'] as $_item) {
-                        //     if(isset($_item['article'])){
-                        //         $title = $_item['article'];
-                        //     }
-                        //     if(isset($_item['name'])){
-                        //         $title = $_item['name'];
-                        //     }
-                        //     $imageMsgs[] = [
-                        //         'title' => isset($title) ? $title : '默认标题',
-                        //         'description' => '内容请点进链接细看',
-                        //         'picUrl' => $_item['icon'],
-                        //         'url' => $_item['detailurl'],
-                        //     ];
-                        // }
-                        // return $this->sendImageMsg($postObj,$imageMsgs);
+                    
 
                     }else{//只有文本消息的回答
                         $content = $res['text'];
