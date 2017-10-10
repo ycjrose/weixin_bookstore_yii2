@@ -26,10 +26,7 @@ class MsgController extends BaseController{
 
     public function actionIndex(){  
 
-        // if($this->checkSignature() && $_GET['echostr']){
-        //     //用于微信第一次认证
-        // 	return $_GET['echostr'];
-        // }else{
+        
             if( !$this->checkSignature() ){
                 //$this->record_log( "校验错误" );
                 //可以直接回复空串，微信服务器不会对此作任何处理，并且不会发起重试
@@ -41,7 +38,6 @@ class MsgController extends BaseController{
             }
 
             return $this->SendMsg();
-        //}
         
        
     }
@@ -50,18 +46,19 @@ class MsgController extends BaseController{
 
         $postStr = file_get_contents('php://input');
         
-        $this->record_log('[xml:]'.$postStr);
+        //$this->record_log('[xml:]'.$postStr);
 
         $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+        var_dump(strtolower($postObj->MsgType));
 
         switch (strtolower($postObj->MsgType)) {
             //如果是订阅事件
-            case 'even':
+            case 'event':
                 
                 //关注事件
                 if(strtolower($postObj->Event) == 'subscribe'){
                     //如果通过扫码关注
-                    if(isset($postObj->EventKey)){
+                    if(!empty($postObj->EventKey)){
                         $event_key = $postObj->EventKey;
                         $qrcode_key = str_replace('qrscene_', '', $event_key);
                         $qrcode_info = MarketQrcode::findOne(['id' => $qrcode_key]);
@@ -92,6 +89,7 @@ class MsgController extends BaseController{
                     $msgType = 'text';
                     $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书";
                     $send_info = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);
+                    var_dump($send_info);
                     
                     return $send_info;
                 }

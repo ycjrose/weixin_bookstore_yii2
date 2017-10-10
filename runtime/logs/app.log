@@ -45030,3 +45030,108 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1507282619.01
     'REQUEST_TIME' => 1507282619
 ]
+2017-10-10 13:07:34 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+' in C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php:646
+Stack trace:
+#0 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(646): PDO->__construct('mysql:host=127....', 'root', 'mysqlpasswd', NULL)
+#1 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#3 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(824): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(866): yii\db\Command->getRawSql()
+#8 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(887): yii\db\Command->logQuery('<span class="st...')
+#9 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#10 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#11 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#12 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#13 C:\Users\ycj\Desktop\wx\modules\weixin\controllers\MsgController.php(71): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#14 C:\Users\ycj\Desktop\wx\modules\weixin\controllers\MsgController.php(40): app\modules\weixin\controllers\MsgController->SendMsg()
+#15 [internal function]: app\modules\weixin\controllers\MsgController->actionIndex()
+#16 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#17 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#18 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\Users\ycj\Desktop\wx\web\index.php(18): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+' in C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php:584
+Stack trace:
+#0 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#1 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Connection.php(824): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(866): yii\db\Command->getRawSql()
+#6 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(887): yii\db\Command->logQuery('<span class="st...')
+#7 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#8 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#9 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#10 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#11 C:\Users\ycj\Desktop\wx\modules\weixin\controllers\MsgController.php(71): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#12 C:\Users\ycj\Desktop\wx\modules\weixin\controllers\MsgController.php(40): app\modules\weixin\controllers\MsgController->SendMsg()
+#13 [internal function]: app\modules\weixin\controllers\MsgController->actionIndex()
+#14 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#15 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#16 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#17 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#18 C:\Users\ycj\Desktop\wx\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\Users\ycj\Desktop\wx\web\index.php(18): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2017-10-10 13:07:32 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'weixin.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\Git\\cmd;D:\\xampp\\php;D:\\xampp\\php\\ext;D:\\xampp\\php\\php-win.exe;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ycj\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ycj\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at weixin.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'weixin.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/ycj/Desktop/wx/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/ycj/Desktop/wx/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Users/ycj/Desktop/wx/web/index.php'
+    'REMOTE_PORT' => '53664'
+    'REDIRECT_URL' => '/weixin/msg'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/weixin/msg'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1507612052.684
+    'REQUEST_TIME' => 1507612052
+]
