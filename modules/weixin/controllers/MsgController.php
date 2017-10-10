@@ -87,7 +87,7 @@ class MsgController extends BaseController{
                     $fromUser = $postObj->ToUserName;
                     $time = time();
                     $msgType = 'text';
-                    $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书";
+                    $content = "欢迎关注ycj的公众号！\n回复#后面跟图书名或标签名可查询图书!\n还可以和我聊天哦！！ ";
                     $send_info = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);
                     var_dump($send_info);
                     
